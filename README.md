@@ -1,1 +1,3 @@
 # what_to_cook
+### Prompts and completions
+The completions endpoint is at the center of our API. It provides a simple interface to our models that is extremely flexible and powerful. You input some text as a prompt, and the model will generate a text completion that attempts to match whatever context or pattern you gave it. For example, if you give the API the prompt, “Write a tagline for an ice cream shop”, it will return a completion like “We serve up smiles with every scoop!”
