@@ -1,4 +1,4 @@
-# what_to_cook
+# What To Cook
 
 Fatigué(e) d’avoir à imaginer une nouvelle recette originale à chaque repas ? Ne cherche plus, What To Cook est là pour toi ! C’est tout simple : tu fournis les ingrédients dont tu disposes dans ton frigo et tes armoires, What To Cook s’occupe du reste.
 
