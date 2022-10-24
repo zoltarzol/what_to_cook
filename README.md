@@ -8,3 +8,4 @@ What To Cook est un site web qui repose sur le framework Django et qui utilise l
 
 
 # test de pull request de cedric vers dev
+ PR N°2 !
