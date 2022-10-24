@@ -13,4 +13,4 @@ test de pull request de cedric vers dev
  tentative de merge direct dans dev (échec attendu)
 
 
- petite modif
+ petite modifvbc
