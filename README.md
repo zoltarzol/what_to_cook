@@ -1,3 +1,9 @@
-# what_to_cook
-### Prompts and completions
-The completions endpoint is at the center of our API. It provides a simple interface to our models that is extremely flexible and powerful. You input some text as a prompt, and the model will generate a text completion that attempts to match whatever context or pattern you gave it. For example, if you give the API the prompt, “Write a tagline for an ice cream shop”, it will return a completion like “We serve up smiles with every scoop!”
+# What To Cook
+
+Fatigué(e) d’avoir à imaginer une nouvelle recette originale à chaque repas ? Ne cherche plus, What To Cook est là pour toi !
+
+C’est tout simple : tu fournis les ingrédients dont tu disposes dans ton frigo et tes armoires, What To Cook s’occupe du reste.
+
+What To Cook est un site web qui repose sur le framework Django et qui utilise l’API OpenAI qui exploite le NLP (traitement du langage naturel). En complément, bootstrap est utilisé pour la partie présentation / design.
+
+
