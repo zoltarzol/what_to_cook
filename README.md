@@ -7,4 +7,4 @@ C’est tout simple : tu fournis les ingrédients dont tu disposes dans ton frig
 What To Cook est un site web qui repose sur le framework Django et qui utilise l’API OpenAI qui exploite le NLP (traitement du langage naturel). En complément, bootstrap est utilisé pour la partie présentation / design.
 
 
-# CECI EST UN ESSAI DE PULL REQUEST
+# test de pull request de cedric vers dev
