@@ -12,8 +12,7 @@ def cedric(request):
     context = {}
     context['form'] = IngredientsForm(request.POST or None)
     if request.method == 'POST':
-        temp = context[0].cleaned_data.get("proteins")
-        print(temp)
+        print(context['form'])
         return render(request,'pages_main/cedric.html',context)
     else:
         # print(context['form'])

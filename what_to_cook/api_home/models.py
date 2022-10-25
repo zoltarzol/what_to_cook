@@ -13,3 +13,8 @@ class Ingredients(models.Model):
     # vegetables = []
     def __str__(self):
         return self.name
+
+class Recipe(models.Model):
+    name = models.CharField(max_length=255)
+    date = models.DateField()
+    members = models.ManyToManyField(Member)
