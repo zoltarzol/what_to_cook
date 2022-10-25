@@ -6,4 +6,5 @@ app_name = "api_home"
 urlpatterns = [
     path('', views.login),   #api est nom de l'application definit sur views
     path('login/', views.page_home),
+    path('cedric/', views.cedric)
 ]

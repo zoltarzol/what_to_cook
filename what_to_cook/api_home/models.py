@@ -8,3 +8,8 @@ class home_page(models.Model):
         blank =  False,
     )
 
+class Ingredients(models.Model):
+    # proteins = models.ManyToManyField()
+    # vegetables = models.ManyToManyField()
+    def __str__(self):
+        return self.name
