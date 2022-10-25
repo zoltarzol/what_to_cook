@@ -23,9 +23,3 @@ class IngredientsForm(forms.Form):
 		print("je suis passé par là")
 		model = Ingredients
 		fields = '__all__'
-
-
-
-
-# class ProteinForm(forms.Form):
-	

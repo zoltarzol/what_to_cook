@@ -9,7 +9,7 @@ class home_page(models.Model):
     )
 
 class Ingredients(models.Model):
-    # proteins = models.ManyToManyField()
-    # vegetables = models.ManyToManyField()
+    # proteins = []
+    # vegetables = []
     def __str__(self):
         return self.name
