@@ -1,0 +1,19 @@
+{% extends 'api_home/base.html' %}
+
+
+{%block content%}
+
+<h1> Ici le questionnaire </h1>
+
+
+
+<p> nous vous prions de remplir tous les champs pour avoir votre recette de rêve! </p>
+
+
+<form method="POST" class= post-form>
+    {%csrf_token %} 
+    {{ form.as_p}}
+    <button type="submit" class="save btn">Enregistrer
+</form>
+
+{%endblock%}

@@ -1,0 +1,16 @@
+{% load static %}
+
+#bg {
+    background-size: 900px 900px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+}
+
+#id_legume_toute{
+    color:greenyellow
+}
+
+
+
+}
