@@ -1,7 +1,8 @@
 from random import choices
 from unittest.util import _MAX_LENGTH
 from django.db import models
-from django import forms
+# from django import forms
+from multiselectfield import MultiSelectField 
 
 
 
@@ -15,25 +16,33 @@ class home_page(models.Model):
 
 
 class Students(models.Model):
-    name = models.TextField(max_length = 800)
-    section = models.TextField(max_length = 800)
-
-    def __str__(self):
-        return self.name, self.section
+    name = models.TextField(max_length = 300)
+    section = models.TextField(max_length = 300)
 
 
 
 
-class ProteinForm(forms.Form):
-    PROTEIN_CHOICES =(
-    ("boef", "Beef"),
-    ("2", "Veal"),
-    ("3", "Salman"),
-    ("4", "Eggs"),
-     )
-    title = forms.MultipleChoiceField(choices = PROTEIN_CHOICES, widget=forms.CheckboxSelectMultiple())
-    section = models.TextField(max_length = 800)
+PROTEIN_CHOICES =(
+    (1, "Boeuf"),
+    (2, "Veau"),
+    (3, "Saumon"),
+    (4, "Oeufs"),
+)
 
-    def __str__(self):
-        return self.name, self.section
-    
+VEGGIES_CHOICES =(
+    (1, "Haricots Verts"),
+    (2, "Brocoli"),
+    (3, "Poivron"),
+    (4, "Tomate"),
+)
+
+
+
+class IngredientsModel(models.Model):
+
+    proteins = MultiSelectField(choices=PROTEIN_CHOICES,
+                                 max_length=10, null = True)
+    veggies = MultiSelectField(choices=VEGGIES_CHOICES,
+                                 max_length=6, null = True)
+    # 
+

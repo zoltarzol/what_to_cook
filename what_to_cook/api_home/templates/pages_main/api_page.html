@@ -6,10 +6,10 @@
 
 <body>
     <h2> Ingrédients Recette </h2>
-    <form  method = "POST"  class = "post-form"> 
+    <form  method = "POST" > 
          {% csrf_token %}   <!-- proteger le formulaire -->
          {{ form.as_p}}  <!--Inserer le formulaire-->
-         <button type="submit" class ="save btn"> Enregistrer </button>
+         <input type="submit" value =" Envoyer">
         
 
 

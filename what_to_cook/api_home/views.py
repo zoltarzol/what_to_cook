@@ -1,8 +1,8 @@
 from django.shortcuts import redirect, render
 
 from django.views.generic import *
-from .models import Students
-from .forms import StudentsForm, test
+from .forms import StudentsForm, IngredientsForm
+
 
 
 
@@ -32,9 +32,36 @@ def index(request):
     return render(request, 'pages_main/api_page.html', {'form' : form})
 
 
-def nour(request):
 
-    form = test()
+
+def nour(request):
+    if request.method == 'GET':
+        
+        form = IngredientsForm()
+      #  a = dict(form.data)['proteins']
+       # return(a)
+       # print(dict(form.data)['proteins'])
+
+        
+        return render(request, 'pages_main/api_page.html', {'form' : form})
+
+   
+    if request.method == "POST":
+        form = IngredientsForm(request.POST)
+        db_response = form.save()
+       # print(db_response.
+        if form.is_valid():
+           # a = dict(form.data)['proteins']
+            print(form.cleaned_data)
+
+            return render(request, 'pages_main/api_page.html', {'form': form })
+
+        else :
+            print("formulaire non valide")
+    else :
+        form = IngredientsForm()
 
     return render(request, 'pages_main/api_page.html', {'form' : form})
+
+
 

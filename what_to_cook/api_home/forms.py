@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from .models import Students, ProteinForm
+from .models import Students, IngredientsModel
 from django import forms
 
 
@@ -14,10 +14,11 @@ class StudentsForm(ModelForm):
 
 
 
-class test(forms.Form):
+class IngredientsForm(ModelForm):
     class Meta:
-        model =ProteinForm
-        fields = {'section'}
+        model = IngredientsModel
+        fields = {'proteins','veggies'}
+
 
 
 
