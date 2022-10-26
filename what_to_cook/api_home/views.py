@@ -4,17 +4,6 @@ from django.views.generic import *
 from .forms import IngredientsForm
 
 
-# Create your views here.
-
-def login(request):
-    return render(request,'pages_main/login.html')
-
-
-
-def register(request):
-    return render(request,'pages_main/register.html')
-
-
 
 def page_home(request):
     return render(request, 'pages_main/home.html')

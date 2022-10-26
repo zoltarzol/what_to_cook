@@ -3,11 +3,9 @@ from . import views
 
 
 #api est nom de l'application definit sur views
-app_name = "api_home"
+app_name = "user_app"
 
 urlpatterns = [
-   
-    path('', views.page_home),
-    path('api/', views.create_recipe, name = 'page_api'),
-
+ path('login/', views.login),   
+ path('register/', views.register),
 ]
