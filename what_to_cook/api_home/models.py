@@ -1,9 +1,7 @@
-#from random import choices
 from unittest.util import _MAX_LENGTH
 from django.db import models
-# from django import forms
-from multiselectfield import MultiSelectField 
-
+from multiselectfield import MultiSelectField
+from .functions import csv_to_dict
 
 
 
@@ -14,33 +12,35 @@ class home_page(models.Model):
         blank =  False,
     )
 
-
-class Students(models.Model):
-    name = models.TextField(max_length = 300)
-    section = models.TextField(max_length = 300)
-
-
-
-
-PROTEIN_CHOICES =(
-    (1, "Boeuf"),
-    (2, "Veau"),
-    (3, "Saumon"),
-    (4, "Oeufs"),
-)
-
-VEGGIES_CHOICES =(
-    (1, "Haricots Verts"),
-    (2, "Brocoli"),
-    (3, "Poivron"),
-    (4, "Tomate"),
-)
+ingredients_list_temp = csv_to_dict("/home/ousfia/snap/what_to_cook/what_to_cook/what_to_cook/api_home/ingredients_list.csv")
+proteins = ingredients_list_temp['Proteins']
+cpt = 1
+protein_choices = []
+for protein_ingredient in proteins:
+    protein_choices.append([cpt,protein_ingredient])
+    cpt += 1
 
 
+PROTEIN_CHOICES = tuple(protein_choices)
+
+vegetables = ingredients_list_temp['Vegetables']
+cpt = 1
+vegetables_choices = []
+for vegetables_ingredient in vegetables:
+    vegetables_choices.append([cpt,vegetables_ingredient])
+    cpt += 1
+
+VEGETABLES_CHOICES = tuple(vegetables_choices)
 
 class IngredientsModel(models.Model):
 
-    proteins = MultiSelectField(choices=PROTEIN_CHOICES, max_length=100, null = True, blank = True)
-    veggies = MultiSelectField(choices=VEGGIES_CHOICES, max_length=100, null = True, blank = True)
-    
-
+    proteins = MultiSelectField(choices=PROTEIN_CHOICES,
+                                #  max_choices=2,
+                                 max_length=500,
+                                 null=True,
+                                 blank=True)
+    veggies = MultiSelectField(choices=VEGETABLES_CHOICES,
+                                #  max_choices=3,
+                                 max_length=500,
+                                 null=True,
+                                 blank=True)
