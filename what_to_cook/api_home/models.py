@@ -24,15 +24,10 @@ VEGGIES_CHOICES =(
     (4, "Tomate"),
 )
 
-MY_CHOICES2 = ((1, 'Item title 2.1'),
-               (2, 'Item title 2.2'),
-               (3, 'Item title 2.3'),
-               (4, 'Item title 2.4'),
-               (5, 'Item title 2.5'))
-
 class MyModel(models.Model):
 
     proteins = MultiSelectField(choices=PROTEIN_CHOICES,
+                                 max_choices=2,
                                  max_length=10)
     # veggies = MultiSelectField(choices=VEGGIES_CHOICES,
     #                              max_choices=3,

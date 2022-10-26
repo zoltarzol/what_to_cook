@@ -8,9 +8,10 @@ def page_home(request):
     return render(request,'pages_main/home.html')
 
 def create_recipe(request):
+    form = MyForm(request.POST)
     if request.method == "POST":
-        form = MyForm(request.POST)
         if form.is_valid():
+            form.save()
             print(dict(form.data)['proteins'])
         return render(request, 'pages_main/cedric.html', {'form': form })
     else:
