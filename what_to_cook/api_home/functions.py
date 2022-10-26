@@ -45,7 +45,7 @@ def findrecipe(ingredients):
 
     complete_recipe = response["choices"][0]["text"][2:]
 
-    recipe_name = complete_recipe[:complete_recipe.find("\n")-1]
+    recipe_name = complete_recipe[:complete_recipe.find("\n")]
 
     ingredients_extraction = complete_recipe[complete_recipe.find("Ingredients:") + 14 : complete_recipe.find("Instructions:")-2]
     instructions_extraction = complete_recipe[complete_recipe.find("Instructions:") + 15:]
@@ -80,15 +80,24 @@ def csv_to_dict(csv_file):
         for row in csvreader:
             rows.append(row)
     for category in range(len(fields)):
-        if category%2 == 0:
+        if category%2 == 1:
             to_insert = []
-            print(len(rows[category]))
             for ingredient in range(len(rows)):
-                print(fields[category])
-                print(to_insert)
+                # print(fields[category])
+                # print(to_insert)
                 if rows[ingredient][category] != '':
                     to_insert.append(rows[ingredient][category])
             result[fields[category]] = to_insert
     return result
 
-print(csv_to_dict("what_to_cook/api_home/ingredients_list.csv"))
+# ingredients_list_temp = csv_to_dict("what_to_cook/api_home/ingredients_list.csv")
+# proteins = ingredients_list_temp['Proteins']
+# cpt = 1
+# protein_choices = []
+# for protein_ingredient in proteins:
+#     protein_choices.append([cpt,protein_ingredient])
+#     cpt += 1
+
+# PROTEIN_CHOICES = tuple(protein_choices)
+
+# print(PROTEIN_CHOICES)
