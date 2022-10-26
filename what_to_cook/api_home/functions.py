@@ -33,11 +33,11 @@ completion_arguments = {
   "presence_penalty" : 0
   }
 
-def findrecipe(ingredients, temperature):
+def findrecipe(ingredients):
     response = openai.Completion.create(
         engine = completion_arguments["engine"],
         prompt =  completion_arguments["prompt"],
-        temperature = temperature,
+        temperature = completion_arguments["temperature"],
         top_p = completion_arguments["top_p"],
         max_tokens = completion_arguments["max_tokens"],
         frequency_penalty = completion_arguments["frequency_penalty"],
@@ -60,16 +60,35 @@ def findrecipe(ingredients, temperature):
 
     print("=========================================\n"+str(response)+"\n=========================================\n")
 
-    return {
+    result = {
         "RecipeName" : recipe_name,
         "Ingredients" : ingredients_list,
         "Instructions" : instructions_list
     }
 
-def csv_to_dict(csv_file):
-    with open(csv_file, mode='r') as infile:
-        reader = csv.reader(infile,delimiter=',')
-        print(reader)
-        return {rows[0]:rows[1] for rows in reader}
+    print(result)
 
-csv_to_dict("ingredients_list")
+    return result
+
+def csv_to_dict(csv_file):
+    fields = []
+    rows = []
+    result = dict()
+    with open(csv_file, 'r') as infile:
+        csvreader = csv.reader(infile,delimiter=',')
+        fields = next(csvreader)
+        for row in csvreader:
+            rows.append(row)
+    for category in range(len(fields)):
+        if category%2 == 0:
+            to_insert = []
+            print(len(rows[category]))
+            for ingredient in range(len(rows)):
+                print(fields[category])
+                print(to_insert)
+                if rows[ingredient][category] != '':
+                    to_insert.append(rows[ingredient][category])
+            result[fields[category]] = to_insert
+    return result
+
+print(csv_to_dict("what_to_cook/api_home/ingredients_list.csv"))

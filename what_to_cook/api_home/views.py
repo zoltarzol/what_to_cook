@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .forms import IngredientsForm
-from . import api_call
+from . import functions
 
 
 def login(request):
@@ -14,7 +14,7 @@ def create_recipe(request):
     if request.method == "POST":
         if form.is_valid():
             form.save()
-            print(api_call.findrecipe(api_call.ingredients_from_UI,0.7)["RecipeName"])
+            print(functions.findrecipe(functions.ingredients_from_UI)["RecipeName"])
             print(dict(form.cleaned_data))
         return render(request, 'pages_main/cedric.html', {'form': form })
     else:

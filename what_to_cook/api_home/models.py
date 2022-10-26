@@ -29,8 +29,10 @@ class IngredientsModel(models.Model):
     proteins = MultiSelectField(choices=PROTEIN_CHOICES,
                                  max_choices=2,
                                  max_length=10,
-                                 null=True)
+                                 null=True,
+                                 blank=True)
     veggies = MultiSelectField(choices=VEGGIES_CHOICES,
                                  max_choices=3,
                                  max_length=20,
-                                 null=True)
+                                 null=True,
+                                 blank=True)

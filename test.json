@@ -1,0 +1,15 @@
+{
+  "RecipeName": "Recipe",
+  "Ingredients": [
+    "1 pound beef steak",
+    "1 teaspoon ginger",
+    "1 bell pepper",
+    "1 teaspoon oregano"
+  ],
+  "Instructions": [
+    "Preheat oven to 350 degrees.",
+    "Season the beef with ginger, bell pepper, and oregano.",
+    "Place the beef in a baking dish and bake for about 30 minutes, or until the beef is cooked to your liking.",
+    "Enjoy!"
+  ]
+}
