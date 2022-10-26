@@ -24,11 +24,13 @@ VEGGIES_CHOICES =(
     (4, "Tomate"),
 )
 
-class MyModel(models.Model):
+class IngredientsModel(models.Model):
 
     proteins = MultiSelectField(choices=PROTEIN_CHOICES,
                                  max_choices=2,
-                                 max_length=10)
-    # veggies = MultiSelectField(choices=VEGGIES_CHOICES,
-    #                              max_choices=3,
-    #                              max_length=20)
+                                 max_length=10,
+                                 null=True)
+    veggies = MultiSelectField(choices=VEGGIES_CHOICES,
+                                 max_choices=3,
+                                 max_length=20,
+                                 null=True)
