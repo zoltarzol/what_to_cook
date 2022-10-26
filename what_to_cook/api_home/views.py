@@ -1,6 +1,5 @@
 from django.shortcuts import render
-from .forms import IngredientsForm
-# Create your views here.
+from .forms import MyForm
 
 def login(request):
     return render(request,'pages_main/login.html')
@@ -8,12 +7,11 @@ def login(request):
 def page_home(request):
     return render(request,'pages_main/home.html')
 
-def cedric(request):
-    context = {}
-    context['form'] = IngredientsForm(request.POST or None)
-    if request.method == 'POST':
-        print(context['form'])
-        return render(request,'pages_main/cedric.html',context)
+def create_recipe(request):
+    if request.method == "POST":
+        form = MyForm(request.POST)
+        if form.is_valid():
+            print(dict(form.data)['proteins'])
+        return render(request, 'pages_main/cedric.html', {'form': form })
     else:
-        # print(context['form'])
-        return render(request,'pages_main/cedric.html',context)
+        return render(request, 'pages_main/cedric.html', {'form': form })
