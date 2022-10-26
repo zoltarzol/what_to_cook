@@ -70,7 +70,7 @@ def findrecipe(ingredients):
 
     return result
 
-def csv_to_dict(csv_file):
+def ingredients_csv_to_dict(csv_file):
     fields = []
     rows = []
     result = dict()
@@ -101,3 +101,12 @@ def csv_to_dict(csv_file):
 # PROTEIN_CHOICES = tuple(protein_choices)
 
 # print(PROTEIN_CHOICES)
+
+def split_ingredients_dict_by_category(ingredients_list_csv_to_dict,category):
+    category_list = ingredients_list_csv_to_dict[category]
+    choices = []
+    cpt = 1
+    for ingredient in category_list:
+        choices.append([cpt,ingredient])
+        cpt += 1
+    return tuple(choices)
