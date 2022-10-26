@@ -4,7 +4,7 @@
 # import des bibliothèques requises
 import os
 import openai
-import requests
+import csv
 
 # données d'identification et d'authentification openAI
 openai.api_key = os.getenv("OPENAI_API_KEY")
@@ -65,3 +65,11 @@ def findrecipe(ingredients, temperature):
         "Ingredients" : ingredients_list,
         "Instructions" : instructions_list
     }
+
+def csv_to_dict(csv_file):
+    with open(csv_file, mode='r') as infile:
+        reader = csv.reader(infile,delimiter=',')
+        print(reader)
+        return {rows[0]:rows[1] for rows in reader}
+
+csv_to_dict("ingredients_list")

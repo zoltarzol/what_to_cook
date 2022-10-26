@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .forms import IngredientsForm
 from . import api_call
 
+
 def login(request):
     return render(request,'pages_main/login.html')
 
@@ -18,3 +19,4 @@ def create_recipe(request):
         return render(request, 'pages_main/cedric.html', {'form': form })
     else:
         return render(request, 'pages_main/cedric.html', {'form': form })
+
