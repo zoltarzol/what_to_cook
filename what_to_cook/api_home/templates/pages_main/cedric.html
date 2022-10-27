@@ -1,11 +1,35 @@
 {% extends 'api_home/base_cedric.html'%}
+{% load crispy_forms_tags %}
 
 {% block content %}
 
 <form method="post">
   {% csrf_token %}
+  
   {{ form.as_div }}
-  <input type="submit" value="Envoyer">
+  
+  {% comment %} <input type="submit" value="Envoyer"> {% endcomment %}
+
+  <BR><BR>
+
+  {{ ingredient_choices }}
+
+  <BR><BR>
+
+  <label for="{{ form.proteins.id_for_label }}">Proteins:</label>
+    {{ form.proteins }}
 </form>
 
 {% endblock %}
+
+
+
+<div>
+  {% for key,values in temp.items %}
+    <fieldset>
+      <legend>{{ key }}</legend>
+    {% for value in values %}
+      {{ value }}
+    {% endfor %}
+  {% endfor %}
+</div>

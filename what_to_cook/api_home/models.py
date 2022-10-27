@@ -18,6 +18,8 @@ LEGUMES_CHOICES = split_ingredients_dict_by_category(ingredients_list,'Legumes')
 STARCH_CHOICES = split_ingredients_dict_by_category(ingredients_list,'Starch')
 SPICES_AND_HERBS_CHOICES = split_ingredients_dict_by_category(ingredients_list,'Spices / Herbs')
 
+CHOICES = [PROTEIN_CHOICES,VEGETABLES_CHOICES,LEGUMES_CHOICES,STARCH_CHOICES,SPICES_AND_HERBS_CHOICES]
+
 class IngredientsModel(models.Model):
     proteins = MultiSelectField(choices=PROTEIN_CHOICES,
                                 #  max_choices=2,
