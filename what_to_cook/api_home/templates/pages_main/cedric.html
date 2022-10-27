@@ -1,0 +1,66 @@
+{% extends 'api_home/base_cedric.html'%}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<form method="post">
+  {% csrf_token %}
+
+  <div class='box'>
+    <fieldset>
+      <legend>Proteins</legend>
+        {{ form.proteins }}
+    </fieldset>
+
+    <fieldset>
+      <legend>Vegetables</legend>
+        {{ form.vegetables }}
+    </fieldset>
+
+    <fieldset>
+      <legend>Legumes</legend>
+        {{ form.legumes }}
+    </fieldset>
+
+    <fieldset>
+      <legend>Starch</legend>
+        {{ form.starch }}
+    </fieldset>
+
+    <fieldset>
+      <legend>Spices and herbs</legend>
+        {{ form.spices_and_herbs }}
+    </fieldset>
+  </div>
+
+  <center><input type="submit" value="    !!! Envoyez la sauce !!!     "></center>
+
+</form>
+
+<style>
+
+  .box {
+    display: flex;
+  }
+  .box>* {
+    flex: 1 1 200px;
+  }
+  .hide {
+    visibility: collapse;
+  }
+
+</style>
+
+{% endblock %}
+
+
+
+{% comment %} <div>
+  {% for key,values in temp.items %}
+    <fieldset>
+      <legend>{{ key }}</legend>
+    {% for value in values %}
+      {{ value }}
+    {% endfor %}
+  {% endfor %}
+</div> {% endcomment %}
