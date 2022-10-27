@@ -7,7 +7,16 @@ app_name = "api_home"
 
 urlpatterns = [
    
-    path('', views.page_home),
+    path('home/', views.page_home, name = 'home'),
     path('api/', views.create_recipe, name = 'page_api'),
+    path('special/', views.special_view, name='special'),
+    path('signup/', views.SignupPage.as_view(), name='signup'),
 
 ]
+
+
+#urlpatterns = [
+ #path('login/', views.login),   
+# path('register/', views.register),
+# path('accounts/', include('django.contrib.auth.urls'))]
+

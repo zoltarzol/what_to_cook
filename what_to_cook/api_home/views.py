@@ -2,6 +2,10 @@ from django.shortcuts import redirect, render
 from . import functions
 from django.views.generic import *
 from .forms import IngredientsForm
+from django.contrib.auth.decorators import login_required
+from django.views.generic import CreateView
+from django.contrib.auth.forms import UserCreationForm
+from django.urls import reverse_lazy
 
 
 
@@ -9,15 +13,11 @@ def page_home(request):
     return render(request, 'pages_main/home.html')
 
 
+
 # def index(request):
 #     if request.method == "POST":
 #         form = StudentsForm(request.POST).save()
 #         return redirect('/api')
-#     else :
-#         form = StudentsForm()
-
-#     return render(request, 'pages_main/api_page.html', {'form' : form})
-
 
 
 
@@ -31,6 +31,23 @@ def create_recipe(request):
         return render(request, 'pages_main/api_page.html', {'form': form })
     else:
         return render(request, 'pages_main/api_page.html', {'form': form })
+
+
+
+
+@login_required
+def special_view(request):
+    return render(request, 'pages_main/api_page.html')
+
+
+class SignupPage(CreateView):
+    form_class = UserCreationForm
+    success_url = reverse_lazy('login')
+    template_name = 'registration/signup.html'
+
+
+
+
 
 
 
