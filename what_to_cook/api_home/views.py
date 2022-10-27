@@ -18,6 +18,44 @@ def aask (request):
 
     return render(request,'pages_main/ask.html', {'form':form, })
 
+
+
+def create_recipe(request):
+    form = IngredientsForm(request.POST)
+    if request.method == "POST":
+        if form.is_valid():
+            form.save()
+            print(api_call.findrecipe(api_call.ingredients_from_UI,0.7)["RecipeName"])
+            print(dict(form.cleaned_data))
+        return render(request, 'pages_main/cedric.html', {'form': form })
+    else:
+        return render(request, 'pages_main/cedric.html', {'form': form })
+
+
+dico_1 = {"recette": 'oeuf à la coque', "ingredients": ['oeufs', 'fromage', 'radis noir'], "instructions": ["1:mettez de lhuile sur le feu"," 2:mettez 2 oeufs entier dans la poele", "3: faire cuire à feu doux durant 2min", "4: mettre dans une assiette", "5: parsemez de fromage"]
+}
+
+
+
+
+def recipe_rslt (request):
+    
+    # for key, values in dico_1.items():
+    #     print( key)
+    #     print()
+    #     if(isinstance(values, list)):
+    #         for value in values:
+    #             print(value)
+    #     else:
+    #         print(values)
+    #         print()
+
+   
+    print(dico_1)
+    return render(request, 'pages_main/final_recipe.html',context = dico_1)
+
+    {recette}
+    {{dic_a}}
 #def aask(request):
  #   if request.method == 'POST':
  #       form = UserForm(request.POST)

@@ -7,4 +7,6 @@ urlpatterns = [
     
     path ('', views.base),
     path('asking/', views.aask),
+    path('recipe/', views.recipe_rslt),
 ]
+

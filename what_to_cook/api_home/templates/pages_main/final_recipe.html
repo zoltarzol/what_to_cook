@@ -1,0 +1,43 @@
+{% extends 'api_home/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<header class="page-header">
+    <div class="container">
+        <h1><a href="/"> Voici votre superbe recette de cuisine!</a></h1>
+    </div>
+</header>
+
+
+<h1> recette </h1>
+
+{{recette}}
+
+
+<h2> ingredients</h2>
+<ul>
+{% for i in ingredients  %}
+
+<li> {{i}}</li>
+
+{% endfor %}
+
+<h3>instructions</h3>
+
+{% for i in instructions  %}
+
+<li> {{i}} </li>
+
+
+
+{% endfor %}
+</ul>
+  
+{% endblock content %}
+
+
+
+
+
