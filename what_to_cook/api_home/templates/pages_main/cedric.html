@@ -5,26 +5,57 @@
 
 <form method="post">
   {% csrf_token %}
-  
-  {{ form.as_div }}
-  
-  {% comment %} <input type="submit" value="Envoyer"> {% endcomment %}
 
-  <BR><BR>
+  <div class='box'>
+    <fieldset>
+      <legend>Proteins</legend>
+        {{ form.proteins }}
+    </fieldset>
 
-  {{ ingredient_choices }}
+    <fieldset>
+      <legend>Vegetables</legend>
+        {{ form.vegetables }}
+    </fieldset>
 
-  <BR><BR>
+    <fieldset>
+      <legend>Legumes</legend>
+        {{ form.legumes }}
+    </fieldset>
 
-  <label for="{{ form.proteins.id_for_label }}">Proteins:</label>
-    {{ form.proteins }}
+    <fieldset>
+      <legend>Starch</legend>
+        {{ form.starch }}
+    </fieldset>
+
+    <fieldset>
+      <legend>Spices and herbs</legend>
+        {{ form.spices_and_herbs }}
+    </fieldset>
+  </div>
+
+  <center><input type="submit" value="    !!! Envoyez la sauce !!!     "></center>
+
 </form>
+
+<style>
+
+  .box {
+    display: flex;
+  }
+  .box>* {
+    flex: 1 1 200px;
+  }
+  .hide {
+    visibility: collapse;
+  }
+
+</style>
 
 {% endblock %}
 
 
 
-<div>
+{% comment %} <div>
   {% for key,values in temp.items %}
     <fieldset>
       <legend>{{ key }}</legend>
@@ -32,4 +63,4 @@
       {{ value }}
     {% endfor %}
   {% endfor %}
-</div>
+</div> {% endcomment %}
