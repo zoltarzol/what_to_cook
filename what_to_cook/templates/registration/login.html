@@ -1,6 +1,8 @@
+
 {% extends "api_home/base.html" %}
 
 {% load crispy_forms_tags %}
+
 
 {% block content %}
 
@@ -17,7 +19,9 @@
     {% endif %}
 {% endif %}
 
-<form method="post" action="{% url 'login' %}">
+
+<form method="post" action="login">
+>>>>>>> ee6deab0461746c679ce93d7f9f79fee02424fce
 {% csrf_token %}
 {{form|crispy}}
 

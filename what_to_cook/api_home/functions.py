@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> 3cedef29d8c012cf98ffdac0c7bdc9d25e6e7677
 # définition de la fonction qui trouvera une recette en fonction d'ingrédients fournis
 # la fonction ne prend pour l'instant qu'un seul argument
 # import des bibliothèques requises
@@ -70,7 +73,11 @@ def findrecipe(ingredients):
 
     return result
 
+<<<<<<< HEAD
+def csv_to_dict(csv_file):
+=======
 def ingredients_csv_to_dict(csv_file):
+>>>>>>> 3cedef29d8c012cf98ffdac0c7bdc9d25e6e7677
     fields = []
     rows = []
     result = dict()
@@ -100,6 +107,9 @@ def ingredients_csv_to_dict(csv_file):
 
 # PROTEIN_CHOICES = tuple(protein_choices)
 
+<<<<<<< HEAD
+# print(PROTEIN_CHOICES)
+=======
 # print(PROTEIN_CHOICES)
 
 def split_ingredients_dict_by_category(ingredients_list_csv_to_dict,category):
@@ -110,3 +120,4 @@ def split_ingredients_dict_by_category(ingredients_list_csv_to_dict,category):
         choices.append([cpt,ingredient])
         cpt += 1
     return tuple(choices)
+>>>>>>> 3cedef29d8c012cf98ffdac0c7bdc9d25e6e7677

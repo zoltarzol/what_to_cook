@@ -1,0 +1,20 @@
+{% extends 'api_home/base.html' %}
+{% block content %}
+
+<!--  <link rel="stylesheet" href="CSS/forms.css">
+   -->         
+
+<body>
+    <h2> Ingrédients Recette </h2>
+    <form  method = "POST" > 
+         {% csrf_token %}   <!-- proteger le formulaire -->
+         {{ form.as_p}}  <!--Inserer le formulaire-->
+         <input type="submit" value =" Envoyer">
+        
+
+
+
+    </form>
+      
+
+{% endblock content %}
