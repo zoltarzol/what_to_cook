@@ -7,8 +7,10 @@ import openai
 import csv
 
 # données d'identification et d'authentification openAI
-openai.api_key = os.getenv("OPENAI_API_KEY")
-openai.organization = os.getenv("OPENAI_ORG")
+openai.api_key = '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'
+openai.organization = 'org-n6X2zCb7o31ARXwZnVkEeopQ'
+
+print(openai.api_key)
 
 # le moteur IA utilisé dans ce programme
 engine = "text-davinci-002"
@@ -16,24 +18,23 @@ engine = "text-davinci-002"
 # la liste suivante est ici hardcodée mais sera générée depuis une liste d'ingrédients suggérés par l'interface utilisateur (frontend)
 ingredients_from_UI = ["beef","ginger","bell peppers","oregano"]
 
-# à partir de la liste d'ingrédients, génération d'une chaîne de caractères qui s'intègrera naturellement dans la question posée
-formatted_ingredients = "\n- " + "\n- ".join(ingredients_from_UI)
-
-# la question qui sera posée au modèle openAI
-question_asked_to_openAI_completions = "Provide a cooking recipe based on the following ingredients:\n" + formatted_ingredients + "\n\nThe response should include the recipe's name, the recipe's ingredients, and the recipe's instructions."
-
-# un dictionnaire contenant les arguments à passer à l'endpoint "completions" via la méthode "openai.Completion.create" (SDK openAI)
-completion_arguments = {
-  "engine" : engine,
-  "prompt" : question_asked_to_openAI_completions,
-  "temperature" : 0.7,
-  "top_p" : 1,
-  "max_tokens" : 300,
-  "frequency_penalty" : 0,
-  "presence_penalty" : 0
-  }
-
 def findrecipe(ingredients):
+    # à partir de la liste d'ingrédients, génération d'une chaîne de caractères qui s'intègrera naturellement dans la question posée
+    formatted_ingredients = "\n- " + "\n- ".join(ingredients)
+    print("FORMATTED INGREDIENTS:",formatted_ingredients)
+    # la question qui sera posée au modèle openAI
+    question_asked_to_openAI_completions = "Provide a cooking recipe based on the following ingredients:\n" + formatted_ingredients + "\n\nThe response should include the recipe's name, the recipe's ingredients, and the recipe's instructions."
+
+    # un dictionnaire contenant les arguments à passer à l'endpoint "completions" via la méthode "openai.Completion.create" (SDK openAI)
+    completion_arguments = {
+    "engine" : engine,
+    "prompt" : question_asked_to_openAI_completions,
+    "temperature" : 0.7,
+    "top_p" : 1,
+    "max_tokens" : 300,
+    "frequency_penalty" : 0,
+    "presence_penalty" : 0
+    }
     response = openai.Completion.create(
         engine = completion_arguments["engine"],
         prompt =  completion_arguments["prompt"],
@@ -77,6 +78,7 @@ def ingredients_csv_to_dict(csv_file):
     with open(csv_file, 'r') as infile:
         csvreader = csv.reader(infile,delimiter=',')
         fields = next(csvreader)
+        print(fields)
         for row in csvreader:
             rows.append(row)
     for category in range(len(fields)):
@@ -87,7 +89,7 @@ def ingredients_csv_to_dict(csv_file):
                 # print(to_insert)
                 if rows[ingredient][category] != '':
                     to_insert.append(rows[ingredient][category])
-            result[fields[category]] = to_insert
+            result[fields[category].split('|')[1]] = to_insert
     return result
 
 # ingredients_list_temp = csv_to_dict("what_to_cook/api_home/ingredients_list.csv")
@@ -112,6 +114,6 @@ def split_ingredients_dict_by_category(ingredients_list_csv_to_dict,category):
         cpt += 1
     return tuple(choices)
 
-ingredients_list = ingredients_csv_to_dict("api_home/ingredients_list.csv")
-print(ingredients_list)
-print(list(ingredients_list.keys())[0].split('|')[1])
+# ingredients_list = ingredients_csv_to_dict("api_home/ingredients_list.csv")
+# print(ingredients_list)
+# print(list(ingredients_list.keys())[0].split('|')[1])
