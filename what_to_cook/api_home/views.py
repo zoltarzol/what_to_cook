@@ -3,7 +3,8 @@ from .forms import IngredientsForm
 from . import functions
 from .models import ingredients_list
 
-# from dotenv import load_dotenv          >>> A FINIR D'IMPLEMENTER (fichier .env dans bon repertoire)
+from dotenv import load_dotenv          
+# A FINIR D'IMPLEMENTER (fichier .env dans bon repertoire)
 
 
 def login(request):
@@ -18,7 +19,15 @@ def create_recipe(request):
     if request.method == "POST":
         if form.is_valid():
             form.save()
-            print(functions.findrecipe(functions.ingredients_from_UI)["RecipeName"])
+            # print(functions.findrecipe(functions.ingredients_from_UI)["RecipeName"])
+            ingredients_from_UI =[]
+            for cat,ing_ids in form.cleaned_data:
+                cat2 = list(ingredient_choices.keys())[0].split('|')[1]
+                for ing_id in ing_ids:
+                    if cat2 == cat:
+                        ingredients_from_UI.append(str(ingredient_choices[cat][ing_id - 1]).lower())
+
+            print(functions.findrecipe(ingredients_from_UI)["RecipeName"])
             print(dict(form.cleaned_data))
         return render(request, 'pages_main/cedric.html', {'form': form })
     else:

@@ -103,6 +103,7 @@ def ingredients_csv_to_dict(csv_file):
 # print(PROTEIN_CHOICES)
 
 def split_ingredients_dict_by_category(ingredients_list_csv_to_dict,category):
+    cat = category.capitalize()
     category_list = ingredients_list_csv_to_dict[category]
     choices = []
     cpt = 1
@@ -110,3 +111,7 @@ def split_ingredients_dict_by_category(ingredients_list_csv_to_dict,category):
         choices.append([cpt,ingredient])
         cpt += 1
     return tuple(choices)
+
+ingredients_list = ingredients_csv_to_dict("api_home/ingredients_list.csv")
+print(ingredients_list)
+print(list(ingredients_list.keys())[0].split('|')[1])

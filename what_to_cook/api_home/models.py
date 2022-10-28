@@ -12,11 +12,11 @@ class home_page(models.Model):
 
 ingredients_list = ingredients_csv_to_dict("api_home/ingredients_list.csv")
 
-PROTEIN_CHOICES = split_ingredients_dict_by_category(ingredients_list,'Proteins')
-VEGETABLES_CHOICES = split_ingredients_dict_by_category(ingredients_list,'Vegetables')
-LEGUMES_CHOICES = split_ingredients_dict_by_category(ingredients_list,'Legumes')
-STARCH_CHOICES = split_ingredients_dict_by_category(ingredients_list,'Starch')
-SPICES_AND_HERBS_CHOICES = split_ingredients_dict_by_category(ingredients_list,'Spices / Herbs')
+PROTEIN_CHOICES = split_ingredients_dict_by_category(ingredients_list.keys()[0].split('|')[1],'proteins')
+VEGETABLES_CHOICES = split_ingredients_dict_by_category(ingredients_list.keys()[0].split('|')[1],'vegetables')
+LEGUMES_CHOICES = split_ingredients_dict_by_category(ingredients_list.keys())[0].split('|')[1],'legumes')
+STARCH_CHOICES = split_ingredients_dict_by_category(ingredients_list.keys())[0].split('|')[1],'starch')
+SPICES_AND_HERBS_CHOICES = split_ingredients_dict_by_category(ingredients_list.keys())[0].split('|')[1],'spices_and_herbs')
 
 CHOICES = [PROTEIN_CHOICES,VEGETABLES_CHOICES,LEGUMES_CHOICES,STARCH_CHOICES,SPICES_AND_HERBS_CHOICES]
 
