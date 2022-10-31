@@ -19,7 +19,12 @@
           </li>
           {% if user.is_authenticated %}
           <span class="navbar-text"> Logged as : {{user.get_username}}</span>
-          <a class="btn btn-sm btn-outline-secondary" href='/accounts/logout'?next={{request.path}}">log out</a>
+          {% comment %} <a class="btn btn-sm btn-outline-secondary" href='/accounts/logout'?next={{request.path}}">log out</a> {% endcomment %}
+
+
+          <a class="btn btn-sm btn-outline-secondary" href='/accounts/logout'?next=/">log out</a>
+
+
           {% else %}
           <span class='navbar-text'>You are not logged</span>
           {% endif %}

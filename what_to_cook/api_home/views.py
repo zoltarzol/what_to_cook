@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from .forms import IngredientsForm
 from . import functions
-from . import models
 from .models import ingredients_list
 from django.views.generic import CreateView
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
+from . import forms
 
 
 # from dotenv import load_dotenv          
@@ -53,9 +53,6 @@ def create_recipe(request):
 
 
 class SignupPage(CreateView):
-    form_class = UserCreationForm
+    form_class = forms.UserCreateForm
     success_url = reverse_lazy('login')
     template_name = 'registration/signup.html'
-
-
-

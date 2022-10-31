@@ -1,7 +1,6 @@
 from django.forms import ModelForm
 from api_home.models import IngredientsModel
-from django import forms
-from . import models
+from django.contrib.auth.forms import UserCreationForm
 
 class IngredientsForm(ModelForm):
     class Meta:
@@ -10,3 +9,7 @@ class IngredientsForm(ModelForm):
 
 
 
+
+class UserCreateForm(UserCreationForm):
+    class Meta(UserCreationForm.Meta):
+        fields = ("username","email", "password1", "password2")
