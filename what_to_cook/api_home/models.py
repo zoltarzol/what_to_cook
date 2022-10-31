@@ -1,5 +1,7 @@
 from unittest.util import _MAX_LENGTH
 from django.db import models
+from multiselectfield import MultiSelectField
+from .functions import ingredients_csv_to_dict, split_ingredients_dict_by_category
 
 # Create your models here.
 class home_page(models.Model):
@@ -8,43 +10,43 @@ class home_page(models.Model):
         blank =  False,
     )
 
-#class Ask (models.Model):
-    #class meta:
-        #name= models.CharField(max_length=100),
-        #surname=models.CharField(max_length=50),
-        #annee=models.DateField(),
 
+# ingredients_list_copy = {}
 
+# for i in range(5):
+#     ingredients_list_copy = list(ingredients_list.keys())[i])
 
-class Ask(models.Model):
-        SALADE='sl'
-        POIVRON ='pvr'
-        TOMATE ='tmt'
-        CHAMPIGNON ='cpn'
-        AGNEAU='ag'
-        DINDE ='din'
-        POULET ='pou'
-        BOEUF ='bo'
-        CHOIX_ALIMENTS = [
-         (SALADE, 'salade'),
-         (POIVRON, 'poivron'),
-         (TOMATE, 'tomate'),
-         (CHAMPIGNON, 'champignon'),]
-        CHOIX_VIANDES = [
-         (AGNEAU, 'agneau'),
-         (DINDE, 'dinde'),
-         (POULET, 'poulet'),
-         (BOEUF, 'boeuf'),
-    ]
-        legume_toute = models.CharField(
-        max_length=3,
-        choices=CHOIX_ALIMENTS,
-        default=SALADE,
-    )
+PROTEIN_CHOICES = split_ingredients_dict_by_category(ingredients_list,'proteins')
+VEGETABLES_CHOICES = split_ingredients_dict_by_category(ingredients_list,'vegetables')
+LEGUMES_CHOICES = split_ingredients_dict_by_category(ingredients_list,'legumes')
+STARCH_CHOICES = split_ingredients_dict_by_category(ingredients_list,'starch')
+SPICES_AND_HERBS_CHOICES = split_ingredients_dict_by_category(ingredients_list,'spices_and_herbs')
 
+CHOICES = [PROTEIN_CHOICES,VEGETABLES_CHOICES,LEGUMES_CHOICES,STARCH_CHOICES,SPICES_AND_HERBS_CHOICES]
 
-        de_la_viande= models.CharField(
-        max_length=3,
-        choices=CHOIX_VIANDES,
-        default=AGNEAU,
-    )
+class IngredientsModel(models.Model):
+    proteins = MultiSelectField(choices=PROTEIN_CHOICES,
+                                #  max_choices=2,
+                                 max_length=500,
+                                 null=True,
+                                 blank=True)
+    vegetables = MultiSelectField(choices=VEGETABLES_CHOICES,
+                                #  max_choices=3,
+                                 max_length=500,
+                                 null=True,
+                                 blank=True)
+    legumes = MultiSelectField(choices=LEGUMES_CHOICES,
+                                #  max_choices=2,
+                                 max_length=500,
+                                 null=True,
+                                 blank=True)
+    starch = MultiSelectField(choices=STARCH_CHOICES,
+                                #  max_choices=3,
+                                 max_length=500,
+                                 null=True,
+                                 blank=True)
+    spices_and_herbs = MultiSelectField(choices=SPICES_AND_HERBS_CHOICES,
+                                #  max_choices=3,
+                                 max_length=500,
+                                 null=True,
+                                 blank=True)

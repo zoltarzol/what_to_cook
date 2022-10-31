@@ -4,6 +4,4 @@ Fatigué(e) d’avoir à imaginer une nouvelle recette originale à chaque repas
 
 C’est tout simple : tu fournis les ingrédients dont tu disposes dans ton frigo et tes armoires, What To Cook s’occupe du reste.
 
-What To Cook est un site web qui repose sur le framework Django et qui utilise l’API OpenAI qui exploite le NLP (traitement du langage naturel). En complément, bootstrap est utilisé pour la partie présentation / design.
-
-
+What To Cook est un site Web qui repose sur le framework Django, avec utilisation de Bootstrap pour la partie présentation / design. Pour la génération des recettes, la partie back-end du site interagit avec le modèle de langage GPT-3 de l’API OpenAI, spécialisé en NLP (natural language processing).
