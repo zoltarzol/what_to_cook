@@ -43,7 +43,7 @@ def create_recipe(request):
                         cpt += 1
 
             print(ingredients_from_UI)
-            print(functions.findrecipe(ingredients_from_UI)["RecipeName"])
+            print(functions.findrecipe(["salmon","curcuma"]))
         return render(request, 'pages_main/cedric.html', {'form': form })
     else:
         return render(request, 'pages_main/cedric.html', {'form': form, 'ingredient_choices': ingredient_choices })

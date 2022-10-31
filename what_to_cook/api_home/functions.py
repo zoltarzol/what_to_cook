@@ -2,26 +2,27 @@
 # définition de la fonction qui trouvera une recette en fonction d'ingrédients fournis
 # la fonction ne prend pour l'instant qu'un seul argument
 # import des bibliothèques requises
-import os
 import openai
 import csv
+from dotenv import load_dotenv, dotenv_values
 
-# données d'identification et d'authentification openAI
-openai.api_key = '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'
-openai.organization = 'org-n6X2zCb7o31ARXwZnVkEeopQ'
-
-print(openai.api_key)
-
-# le moteur IA utilisé dans ce programme
-engine = "text-davinci-002"
+load_dotenv()
 
 # la liste suivante est ici hardcodée mais sera générée depuis une liste d'ingrédients suggérés par l'interface utilisateur (frontend)
-ingredients_from_UI = ["beef","ginger","bell peppers","oregano"]
+# ingredients_from_UI = ["beef","ginger","bell peppers","oregano"]
 
 def findrecipe(ingredients):
+    # données d'identification et d'authentification openAI
+    openai.api_key = dotenv_values(".env").popitem(last = False)[1]
+    openai.organization = dotenv_values(".env").popitem()[1]
+
+    # le moteur IA utilisé dans ce programme
+    engine = "text-davinci-002"
+
     # à partir de la liste d'ingrédients, génération d'une chaîne de caractères qui s'intègrera naturellement dans la question posée
     formatted_ingredients = "\n- " + "\n- ".join(ingredients)
     print("FORMATTED INGREDIENTS:",formatted_ingredients)
+
     # la question qui sera posée au modèle openAI
     question_asked_to_openAI_completions = "Provide a cooking recipe based on the following ingredients:\n" + formatted_ingredients + "\n\nThe response should include the recipe's name, the recipe's ingredients, and the recipe's instructions."
 
@@ -35,6 +36,7 @@ def findrecipe(ingredients):
     "frequency_penalty" : 0,
     "presence_penalty" : 0
     }
+
     response = openai.Completion.create(
         engine = completion_arguments["engine"],
         prompt =  completion_arguments["prompt"],
