@@ -14,6 +14,9 @@
     please login with an account that has access.</p>
     {% else %}
     <p>Please login to see this page.</p>
+
+    <!-- <a href="{% url 'login' %}">Log In</a> -->
+    
     {% endif %}
 {% endif %}
 
@@ -44,8 +47,12 @@
         <label>
           <input type="checkbox" value="remember-me"> Remember me
         </label>
+
+       
       </div>
       <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+      <p><a href="{% url 'password_reset' %}">Forgot your password?</a></p>
+
       <p class="mt-5 mb-3 text-muted">&copy; 2022–2023</p>
     </form>
     </div>
