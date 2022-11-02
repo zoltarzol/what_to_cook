@@ -36,3 +36,6 @@ class IngredientsModel(models.Model):
                                  max_length=500,
                                  null=True,
                                  blank=True)
+
+class TestModel(models.Model):
+    resultat = models.CharField(max_length=500)

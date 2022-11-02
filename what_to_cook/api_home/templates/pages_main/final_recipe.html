@@ -30,15 +30,14 @@
 
 <h1><a> recette</a> </h1>
 
-{{recette}}
-
+{{ resultat.RecipeName }}
 
         </div>
 
         <div class="ingredients">
 <h2> ingredients</h2>
 <ul>
-{% for i in ingredients  %}
+{% for i in resultat.Ingredients %}
 
 <li> {{i}}</li>
 
@@ -50,7 +49,7 @@
         <div class="instructions">    
 <h3>instructions</h3>
 <ul>
-{% for i in instructions  %}
+{% for i in resultat.Steps %}
 
 <li> {{i}} </li>
 

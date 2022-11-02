@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import IngredientsForm
+from .forms import IngredientsForm, TestForm
 from .functions import ingredients_full_list, find_recipe
 from django.views.generic import CreateView
 from django.contrib.auth.forms import UserCreationForm
@@ -29,14 +29,15 @@ def create_recipe(request):
                         selected_ingredients.append(ingredients_full_list[cat][int(ingredient_idx)-1].lower())
 
             print("selected_ingredients: ",selected_ingredients)
-            find_recipe(selected_ingredients)
-        return render(request, 'pages_main/cedric.html', {'form': form, 'ingredients_full_list': ingredients_full_list })
+            resultat = find_recipe(selected_ingredients)
+        return render(request, 'pages_main/final_recipe.html', {'resultat': resultat })
     else:
         return render(request, 'pages_main/cedric.html', {'form': form, 'ingredients_full_list': ingredients_full_list })
 
 @login_required
-def recipe_rslt (request):   
-    return render(request, 'pages_main/final_recipe.html', context = recette)
+def recipe_rslt (request):
+    form = TestForm(request.POST)
+    return render(request, 'pages_main/final_recipe.html', context = form.resultat)
 
 class SignupPage(CreateView):
     form_class = UserCreationForm
