@@ -8,7 +8,7 @@
 <meta name="twitter:widgets:csp" content="on" />
 <link rel="profile" href="https://gmpg.org/xfn/11" />
 <link rel="pingback" href="https://demo.kallyas.net/phaeton-restaurant-bar-pub/xmlrpc.php" />
-<link media="all" href="https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/cache/autoptimize/7/css/autoptimize_de4a4eb0fc3d317e8cfe93d94567d4f4.css" rel="stylesheet" /><link media="print" href="https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/cache/autoptimize/7/css/autoptimize_eca5ff01e2572fca01bcd186d357dff1.css" rel="stylesheet" /><title>What to cook ?</title>
+<link media="all" href="{% static 'css/autoptimize_de4a4eb0fc3d317e8cfe93d94567d4f4.css' %}" rel="stylesheet" /><link media="print" href="{% static 'css/autoptimize_eca5ff01e2572fca01bcd186d357dff1.css' %}" rel="stylesheet" /><title>What to cook ?</title>
 
 
 <meta name='robots' content='max-image-preview:large' />
@@ -111,7 +111,9 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 <div class='fxb-col fxb fxb-center-x fxb-center-y fxb-basis-auto site-header-col-center site-header-main-center'>
 <div id="logo-container" class="logo-container  hasHoverMe logosize--contain zn-original-logo">
 
-<h1 class='site-logo logo ' id='logo'><img class="logo-img site-logo-img" src="https://img.lovepik.com/original_origin_pic/19/01/15/6f2577a39931f483595587e41232633f.png_wh860.png" alt="Phaeton - Pub / Bar / Restaurant Demo" title="Just another Kallyas Demo Sites site" /></a></h1> 
+<!-- logo -->
+
+<h1 class='site-logo logo ' id='logo'><img class="logo-img site-logo-img" src="{% static 'api_home/logo.png' %}" alt="What to Cook ?" title="What to Cook ?" /></a></h1> 
 </div>
 <div class="sh-component main-menu-wrapper" role="navigation" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
 <div class="zn-res-menuwrapper">
@@ -123,7 +125,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 </div>
 <div id="main-menu" class="main-nav mainnav--sidepanel mainnav--active-uline mainnav--pointer-dash nav-mm--light zn_mega_wrapper "><ul id="menu-restaurant-menu" class="main-menu main-menu-nav zn_mega_menu ">
 <li id="menu-item-18" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-18  main-menu-item-top  menu-item-even menu-item-depth-0"><a href="#eluid5a1efe31" class=" main-menu-link main-menu-link-top"><span>A PROPOS</span></a></li>
-<li id="menu-item-19" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-19  main-menu-item-top  menu-item-even menu-item-depth-0"><a href="#eluid301682de" class=" main-menu-link main-menu-link-top"><span>HOME</span></a></li>
+<li id="menu-item-19" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-19  main-menu-item-top  menu-item-even menu-item-depth-0"><a href="/" class=" main-menu-link main-menu-link-top"><span>HOME</span></a></li>
 <li id="menu-item-20" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-20  main-menu-item-top  menu-item-even menu-item-depth-0"><a href="#eluidf444cbdd" class=" main-menu-link main-menu-link-top"><span>GÉNÉRER UNE RECETTE</span></a></li>
 <li id="menu-item-21" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-21  main-menu-item-top  menu-item-even menu-item-depth-0"><a href="#eluid0efaa466" class=" main-menu-link main-menu-link-top"><span>NOUVEAUTÉS</span></a></li>
 
@@ -150,22 +152,21 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5TKGS7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="zn_pb_wrapper clearfix zn_sortable_content" data-droplevel="0"> <section class="zn_section eluid6c765147     section-sidemargins    zn_section--relative section--no " id="eluid6c765147">
-<div class="zn-bgSource "><div class="zn-bgSource-image" style="background-image:url('https://blog.zenchef.fr/wp-content/uploads/2018/06/Sans-titre-2.jpg');background-repeat:no-repeat;background-position:left top;background-size:cover;background-attachment:scroll"></div></div>
+<div class="zn-bgSource "><div class="zn-bgSource-image" style="background-image:url({% static 'api_home/Sans-titre-2.jpg'%});background-repeat:no-repeat;background-position:left top;background-size:cover;background-attachment:scroll"></div></div>
 <div class="zn_section_size container zn-section-height--auto zn-section-content_algn--top ">
 <div class="row ">
 <div class="eluid4ebdbad4            col-md-12 col-sm-12   znColumnElement" id="eluid4ebdbad4">
 <div class="znColumnElement-innerWrapper-eluid4ebdbad4 znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-top znColumnElement-innerWrapper--halign-left ">
-<div class="znColumnElement-innerContent"> <div class="kl-title-block clearfix tbk--text- tbk--center text-center tbk-symbol--  tbk-icon-pos--after-title eluid1293c1c0 "><h1 class="tbk__title" itemprop="headline">What to cook</h1><h2 class="tbk__subtitle" itemprop="alternativeHeadline">Fatigué(e) d’avoir à imaginer une nouvelle recette originale à chaque repas ? Ne cherche plus, What To Cook est là pour toi !
-<p></p>
-C’est tout simple : tu fournis les ingrédients dont tu disposes dans ton frigo et tes armoires, What To Cook s’occupe du reste.
-<p></p>
-What To Cook est un site Web qui repose sur le framework Django, avec utilisation de Bootstrap pour la partie présentation / design. Pour la génération des recettes, la partie back-end du site interagit avec le modèle de langage GPT-3 de l’API OpenAI, spécialisé en NLP (natural language processing).
+<div class="znColumnElement-innerContent"> <div class="kl-title-block clearfix tbk--text- tbk--center text-center tbk-symbol--  tbk-icon-pos--after-title eluid1293c1c0 "><h1 class="tbk__title" itemprop="headline">What to cook</h1><h2 class="tbk__subtitle" itemprop="alternativeHeadline">Fatigué(e) d’avoir à imaginer une nouvelle recette originale à chaque repas ?
+	<br><br>
+Ne cherche plus, What to cook est là pour toi !
+<br><br>C’est tout simple ! Tu fournis les ingrédients dont tu disposes dans ton frigo et tes armoires, What to cook s’occupe du reste.
   </h2></div> </div>
 </div>
 </div>
 <div class="eluid344c21fb  col-lg-offset-1 col-md-offset-1 col-sm-offset-1        col-md-10 col-sm-10   znColumnElement" id="eluid344c21fb">
 <div class="znColumnElement-innerWrapper-eluid344c21fb znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-top znColumnElement-innerWrapper--halign-left ">
-<div class="znColumnElement-innerContent"> <div id="eluid64a95d22" class="zn_buttons_element eluid64a95d22 text-center "><a href="#eluid301682de" id="eluid64a95d220" class="eluid64a95d220 btn-element btn-element-0 btn  btn-fullcolor btn-custom-color btn-lg btn-forth zn_dummy_value btn-icon--before btn--square" data-target="smoothscroll" itemprop="url"><span>SEE OUR MENU</span></a></div> </div>
+
 </div>
 </div>
 </div>
@@ -182,7 +183,13 @@ What To Cook est un site Web qui repose sur le framework Django, avec utilisatio
 <div class="row zn_col_container-smart_container gutter-0">
 <div class="eluidc9f0374e            col-md-11 col-sm-11   znColumnElement" id="eluidc9f0374e">
 <div class="znColumnElement-innerWrapper-eluidc9f0374e znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-top znColumnElement-innerWrapper--halign-left ">
-<div class="znColumnElement-innerContent"> <div class="th-spacer clearfix eluid374f0b28   hidden-sm hidden-xs "></div><div class="kl-title-block clearfix tbk--text- tbk--left text-left tbk-symbol--  tbk-icon-pos--after-title eluid9fc3ae52 "><h2 class="tbk__title" itemprop="headline">A propos</h2><div class="tbk__text"><p><span style="font-family: 'Open Sans'; font-size: 16px;">What To Cook est un site web qui repose sur le framework Django et qui utilise l’API OpenAI qui exploite le NLP (traitement du langage naturel). En complément, bootstrap est utilisé pour la partie présentation / design.
+<div class="znColumnElement-innerContent"> <div class="th-spacer clearfix eluid374f0b28   hidden-sm hidden-xs "></div><div class="kl-title-block clearfix tbk--text- tbk--left text-left tbk-symbol--  tbk-icon-pos--after-title eluid9fc3ae52 "><h2 class="tbk__title" itemprop="headline">A propos</h2><div class="tbk__text"><p><span style="font-family: 'Open Sans'; font-size: 16px;">Fatigué(e) d’avoir à imaginer une nouvelle recette originale à chaque repas ? Ne cherche plus, What To Cook est là pour toi !
+<div></div>	
+C’est tout simple : tu fournis les ingrédients dont tu disposes dans ton frigo et tes armoires, What To Cook s’occupe du reste.
+<div></div>	
+What to cook est un site Web qui repose sur le framework Django, avec utilisation de Bootstrap pour la partie présentation / design.
+<div></div>
+Pour la génération des recettes, la partie back-end du site interagit avec le modèle de langage GPT-3 de l’API OpenAI, spécialisé en NLP (natural language processing).
 </span></p>
 </div></div></div>
 
@@ -202,7 +209,7 @@ What To Cook est un site Web qui repose sur le framework Django, avec utilisatio
 
 <!-- image 2-->
 
-<div class="zn-bgSource "><div class="zn-bgSource-image" style="background-image:url(https://www.howsweeteats.com/wp-content/uploads/2020/10/tortilla-eggs-I-howsweeteats.com-7-1.jpg);background-repeat:repeat;background-position:center center;background-size:cover;background-attachment:scroll"></div></div>
+<div class="zn-bgSource "><div class="zn-bgSource-image" style="background-image:url({% static 'api_home/tortilla-eggs-I-howsweeteats.jpg'%});background-repeat:no-repeat;background-position:center center;background-size:auto;background-attachment:scroll"></div></div>
 </div>
 <div class="th-spacer clearfix eluid0d29baeb hidden-lg hidden-md hidden-sm  "></div> </div>
 </div>
@@ -210,28 +217,8 @@ What To Cook est un site Web qui repose sur le framework Django, avec utilisatio
 </div>
 </div>
 </section>
-<section class="zn_section eluid7f254383   zn_parallax  section-sidemargins    zn_section--relative section--no " id="eluid7f254383">
 
-<!-- image 3 -->
-<div class="zn-bgSource zn-bgSource-imageParallax js-znParallax"><div class="zn-bgSource-image" style="background-image:url(https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422.jpg);background-repeat:no-repeat;background-position:center center;background-size:cover"></div></div>
-<div class="zn_section_size container zn-section-height--auto zn-section-content_algn--top ">
-<div class="row ">
-<div class="eluidf0600da9            col-md-12 col-sm-12   znColumnElement" id="eluidf0600da9">
-<div class="znColumnElement-innerWrapper-eluidf0600da9 znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-top znColumnElement-innerWrapper--halign-left ">
-<div class="znColumnElement-innerContent"> <div class="kl-title-block clearfix tbk--text- tbk--center text-center tbk-symbol--  tbk-icon-pos--after-title eluid6583045a "><h1 class="tbk__title" itemprop="headline">TODAY'S SPECIALITY</h1><h2 class="tbk__subtitle" itemprop="alternativeHeadline">Chicken with vegetables: mashed potatoes, bean pods, croutons, cranberry jam,rosemary</h2></div> </div>
-</div>
-</div>
-<div class="eluidbebc0551  col-lg-offset-1 col-md-offset-1 col-sm-offset-1        col-md-10 col-sm-10   znColumnElement" id="eluidbebc0551">
-<div class="znColumnElement-innerWrapper-eluidbebc0551 znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-top znColumnElement-innerWrapper--halign-left ">
-<div class="znColumnElement-innerContent"> <div id="eluida03822dd" class="zn_buttons_element eluida03822dd text-center "><a href="#" id="eluida03822dd0" class="eluida03822dd0 btn-element btn-element-0 btn  btn-fullcolor btn-custom-color btn-lg btn-forth zn_dummy_value btn-icon--before btn--square" target="_self" itemprop="url"><span>7 Day’s Menu</span></a></div> </div>
-</div>
-</div>
-</div>
-</div>
-
-
-
-</section>
+<!--
 <section class="zn_section eluid301682de     section-sidemargins    section--no " id="eluid301682de">
 <div class="zn_section_size container zn-section-height--auto zn-section-content_algn--top ">
 <div class="row ">
@@ -241,9 +228,7 @@ What To Cook est un site Web qui repose sur le framework Django, avec utilisatio
 </div>
 </div>
 
-
-<!-- supprimer la section du menu -->
-
+supprimer la section du menu
 
 <div class="clearfix"></div>
 </div>
@@ -284,10 +269,13 @@ What To Cook est un site Web qui repose sur le framework Django, avec utilisatio
 </div>
 
 </section>
+
+-->
+
 <section class="zn_section eluid88b1cfba   zn_parallax  section-sidemargins    zn_section--relative section--no " id="eluid88b1cfba">
 
   <!-- image 5 -->
-<div class="zn-bgSource zn-bgSource-imageParallax js-znParallax"><div class="zn-bgSource-image" style="background-image:url(https://expoexhibitionstands.eu/application/files/7015/7424/1330/12_idees_creatives_pour_votre_stand_dexposition.jpg);background-repeat:no-repeat;background-position:center center;background-size:cover"></div><div class="zn-bgSource-overlay" style="background-color:rgba(53,53,53,0.3)"></div></div>
+<div class="zn-bgSource zn-bgSource-imageParallax js-znParallax"><div class="zn-bgSource-image" style="background-image:url({% static 'api_home/12_idees_creatives_pour_votre_stand_dexposition.jpg'%});background-repeat:no-repeat;background-position:center center;background-size:cover"></div><div class="zn-bgSource-overlay" style="background-color:rgba(53,53,53,0.3)"></div></div>
 <div class="zn_section_size container zn-section-height--auto zn-section-content_algn--top ">
 <div class="row ">
 <div class="eluid82e08d3b            col-md-12 col-sm-12   znColumnElement" id="eluid82e08d3b">
@@ -362,7 +350,7 @@ What To Cook est un site Web qui repose sur le framework Django, avec utilisatio
   <!-- image 6 for desserts  -->
 
 
-<div class="zn-bgSource zn-bgSource-imageParallax js-znParallax"><div class="zn-bgSource-image" style="background-image:url(https://s3-eu-west-1.amazonaws.com/images-ca-1-0-1-eu/tag_photos/original/10512/dessert-facile-cherries-5300559_1920.jpg);background-repeat:no-repeat;background-position:center center;background-size:cover"></div><div class="zn-bgSource-overlay" style="background-color:rgba(53,53,53,0.3)"></div></div>
+<div class="zn-bgSource zn-bgSource-imageParallax js-znParallax"><div class="zn-bgSource-image" style="background-image:url({% static 'api_home/dessert-facile-cherries-5300559_1920.jpg'%});background-repeat:no-repeat;background-position:center center;background-size:cover"></div><div class="zn-bgSource-overlay" style="background-color:rgba(53,53,53,0.3)"></div></div>
 <div class="zn_section_size container zn-section-height--auto zn-section-content_algn--top ">
 <div class="row ">
 <div class="eluid6a435109  col-lg-offset-2 col-md-offset-2 col-sm-offset-2        col-md-8 col-sm-8   znColumnElement" id="eluid6a435109">
@@ -374,6 +362,9 @@ we have hundreds of top-rated dessert recipes to satisfy your taste buds.</h2></
 </div>
 </div>
 </section>
+
+<!--
+
 <section class="zn_section eluid0efaa466     section-sidemargins    section--no " id="eluid0efaa466">
 <div class="zn_section_size container zn-section-height--auto zn-section-content_algn--top ">
 <div class="row ">
@@ -418,10 +409,11 @@ we have hundreds of top-rated dessert recipes to satisfy your taste buds.</h2></
 </div>
 
 
-<!-- Section google map  -->
+Section google map
+
+</section> -->
 
 
-</section>
 <section class="zn_section eluidfc32c588     section-sidemargins    section--no " id="eluidfc32c588">
 <div class="zn_section_size full_width zn-section-height--auto zn-section-content_algn--top ">
 <div class="row ">
@@ -473,7 +465,7 @@ we have hundreds of top-rated dessert recipes to satisfy your taste buds.</h2></
 <div class="eluidd46f26d5            col-md-12 col-sm-12   znColumnElement" id="eluidd46f26d5">
 <div class="znColumnElement-innerWrapper-eluidd46f26d5 znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-top znColumnElement-innerWrapper--halign-left ">
 <div class="znColumnElement-innerContent"> <div class="elm-custommenu clearfix eluidcf6fd41e  text-center elm-custommenu--h1"><ul id="eluidcf6fd41e" class="elm-cmlist clearfix elm-cmlist--skin-dark element-scheme--dark zn_dummy_value elm-cmlist--h1 elm-cmlist--dropDown nav-with-smooth-scroll"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18"><a href="#eluid5a1efe31"><span>ABOUT US</span></a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19"><a href="#eluid301682de"><span>HOME</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19"><a href="#eluidd46f26d5"><span>HOME</span></a></li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="#eluidf444cbdd"><span>GÉNÉRER UNE RECETTE</span></a></li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21"><a href="#eluid0efaa466"><span>NOUVEAUTÉS</span></a></li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22"><a href="accounts/login/"><span>SE CONNECTER</span></a></li>
