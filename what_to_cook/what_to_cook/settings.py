@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
-from telnetlib import LOGOUT
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -36,16 +35,12 @@ INSTALLED_APPS = [
     'multiselectfield',
     'crispy_forms',
     'widget_tweaks',
-
-
-
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-   
 ]
 
 MIDDLEWARE = [
@@ -124,8 +119,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = '../../api_home/static/'
-print(STATIC_URL)
+STATIC_URL = 'static/'
+
+STATICFILES_DIRS=[BASE_DIR/"static",]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -133,3 +129,4 @@ print(STATIC_URL)
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = '/api'
+LOGOUT_REDIRECT_URL = '/'
