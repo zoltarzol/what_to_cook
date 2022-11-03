@@ -6,9 +6,6 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
 
-def login(request):
-    return render(request,'pages_main/login.html')
-
 def page_home(request):
     return render(request,'pages_main/home.html')
 
@@ -28,7 +25,7 @@ def create_recipe(request):
                     if cat in ingredients_full_list.keys():
                         selected_ingredients.append(ingredients_full_list[cat][int(ingredient_idx)-1].lower())
 
-            print("selected_ingredients: ",selected_ingredients)
+            print("SELECTED_INGREDIENTS: ",selected_ingredients)
             resultat = find_recipe(selected_ingredients)
         return render(request, 'pages_main/final_recipe.html', {'resultat': resultat })
     else:
