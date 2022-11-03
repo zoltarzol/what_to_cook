@@ -1,6 +1,6 @@
 from django.forms import ModelForm
 from api_home.models import IngredientsModel, TestModel
-from api_home.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm
 
 class IngredientsForm(ModelForm):
     class Meta:

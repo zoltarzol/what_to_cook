@@ -1,4 +1,4 @@
-{% load static %}
+
 
 
 #bg {
@@ -25,7 +25,7 @@ size: 80px;
                margin:80px 400px 60px 400px;
                padding: 150px 100px 130px 100px;
                text-align: center;
-               background-color : rgb(108, 104, 104);
+               background-color : rgb(108, 104, 104);}
 .home {
     background-image: url('recipe.jpg');
 }

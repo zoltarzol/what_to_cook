@@ -5,6 +5,7 @@ from django.views.generic import CreateView
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
+from . import forms
 
 def login(request):
     return render(request,'pages_main/login.html')
