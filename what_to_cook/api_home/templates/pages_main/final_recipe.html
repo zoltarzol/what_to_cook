@@ -214,7 +214,7 @@
   <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5TKGS7" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <div class="zn_pb_wrapper clearfix zn_sortable_content" data-droplevel="0">
-    <section class="zn_section eluid6c7651472     section-sidemargins    zn_section--relative section--no "
+    <section class="zn_section eluid6c7651472 section-sidemargins zn_section--relative section--no "
       id="eluid6c7651472">
       <div class="zn-bgSource">
         <div class="zn-bgSource-image"
@@ -231,32 +231,21 @@
                   class="kl-title-block clearfix tbk--text- tbk--center text-center tbk-symbol--  tbk-icon-pos--after-title eluid1293c1c02 ">
 
                   <div class="home">
-
-
                     <div id="conteneur">
-
-                      <div class="ma-table">
-                        <table>
+                      <div class="nom_recette">
+                        <h1>Recette : {{ resultat.RecipeName }}</h1>
+                      </div>
+                      <div>
+                        <div>
+                        <table class="ma-table" style="width:100%">
                           <tr>
                             <td>
-                              <table>
-                                <tr>
-                                  <div class="nom_recette">
-                                    <h1>Recette : {{ resultat.RecipeName }}</h1>
-                                  </div>
-                                </tr>
-                                <tr>
-                                </tr>
-                                <tr>
-                                </tr>
-                                <tr>
-                                  <div class="ingredients">
+                              <div class="ingredients">
                                     <h1>Ingredients</h1>
                                     {% for i in resultat.Ingredients %}
                                     <p>{{i}}</p>
                                     {% endfor %}
-                                </tr>
-                              </table>
+                              </div>
                             </td>
                             <td>
                               <div class="instructions">
@@ -264,14 +253,12 @@
                                 {% for i in resultat.Steps %}
                                 <p>{{i}}</p>
                                 {% endfor %}
-                            </td>
-                          </tr>
+                              </div>
+                              </td>
                         </table>
                       </div>
                     </div>
                   </div>
-                </div>
-                </script>
                 <script type='text/javascript' id='hg-mailchimp-js-js-extra'>
                   /* <![CDATA[ */
                   var hgMailchimpConfig = { "ajaxurl": "\/phaeton-restaurant-bar-pub\/wp-admin\/admin-ajax.php", "l10n": { "error": "Error:" } }

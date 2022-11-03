@@ -44,16 +44,23 @@ def find_recipe(ingredients):
         frequency_penalty = completion_arguments["frequency_penalty"],
         presence_penalty = completion_arguments["presence_penalty"])
 
-    complete_recipe = response["choices"][0]["text"][2:]
+    complete_recipe = response["choices"][0]["text"][:]
 
-    complete_recipe = complete_recipe.replace('to prepare the dish\n\n','')
+    while complete_recipe.find("\n") == 0:
+        complete_recipe = complete_recipe.strip('\n')
+
+    while complete_recipe.find(" ") == 0:
+        complete_recipe = complete_recipe.strip(' ')
+
+    complete_recipe = complete_recipe.replace('to prepare the dish\n','')
     complete_recipe = complete_recipe.replace('Recipe for','')
     complete_recipe = complete_recipe.replace('Instructions:','Steps')
     complete_recipe = complete_recipe.replace('Ingredients','Ingredients:')
     complete_recipe = complete_recipe.replace('Steps:','Steps')
     complete_recipe = complete_recipe.replace('Steps','Steps:')
+    complete_recipe = complete_recipe.replace('to follow','')
 
-    recipe_name = complete_recipe[complete_recipe.find("\n") + 1 : complete_recipe.find("\nIngredients:")]
+    recipe_name = complete_recipe[: complete_recipe.find("\nIngredients:")]
 
     ingredients_extraction = complete_recipe[complete_recipe.find("Ingredients:") + 14 : complete_recipe.find("Steps:") - 1]
     steps_extraction = complete_recipe[complete_recipe.find("Steps:") + 6:]
