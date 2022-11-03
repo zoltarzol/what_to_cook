@@ -17,7 +17,7 @@ class IngredientsModel(models.Model):
                                  null=True,
                                  blank=True)
     vegetables = MultiSelectField(choices=VEGETABLES_CHOICES,
-                                #  max_choices=3,
+                                 #  max_choices=2,
                                  max_length=500,
                                  null=True,
                                  blank=True)
