@@ -1,6 +1,3 @@
-
-
-
 #bg {
     background-size: 900px 900px;
     background-repeat: no-repeat;
@@ -18,16 +15,16 @@ size: 80px;
     background: rgba(0, 0, 0, 0.181);
 
 
-  }
+}
+
 .ingredients { color: blueviolet;
                background-image: url ('menu.jpg');
                font-weight: bold;
                margin:80px 400px 60px 400px;
                padding: 150px 100px 130px 100px;
                text-align: center;
-               background-color : rgb(108, 104, 104);}
-.home {
-    background-image: url('recipe.jpg');
+               background-color : rgb(108, 104, 104);
+
 }
 
 .tdStyle

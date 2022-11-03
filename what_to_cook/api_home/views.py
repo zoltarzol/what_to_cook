@@ -33,7 +33,7 @@ def create_recipe(request):
             resultat = find_recipe(selected_ingredients)
         return render(request, 'pages_main/final_recipe.html', {'resultat': resultat })
     else:
-        return render(request, 'pages_main/cedric.html', {'form': form, 'ingredients_full_list': ingredients_full_list })
+        return render(request, 'pages_main/ingredient_choices.html', {'form': form, 'ingredients_full_list': ingredients_full_list })
 
 @login_required
 def recipe_rslt (request):

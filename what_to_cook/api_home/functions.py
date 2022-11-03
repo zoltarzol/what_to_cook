@@ -48,8 +48,10 @@ def find_recipe(ingredients):
 
     complete_recipe = complete_recipe.replace('to prepare the dish\n\n','')
     complete_recipe = complete_recipe.replace('Recipe for','')
-    complete_recipe = complete_recipe.replace('Instructions:','Steps:')
+    complete_recipe = complete_recipe.replace('Instructions:','Steps')
     complete_recipe = complete_recipe.replace('Ingredients','Ingredients:')
+    complete_recipe = complete_recipe.replace('Steps:','Steps')
+    complete_recipe = complete_recipe.replace('Steps','Steps:')
 
     recipe_name = complete_recipe[complete_recipe.find("\n") + 1 : complete_recipe.find("\nIngredients:")]
 
@@ -83,22 +85,18 @@ def ingredients_csv_to_dict(csv_file):
     with open(csv_file, 'r') as infile:
         csvreader = csv.reader(infile,delimiter=',')
         fields = next(csvreader)
-        # print(fields)
         for row in csvreader:
             rows.append(row)
     for category in range(len(fields)):
         if category%2 == 1:
             to_insert = []
             for ingredient in range(len(rows)):
-                # print(fields[category])
-                # print(to_insert)
                 if rows[ingredient][category] != "":
                     to_insert.append(rows[ingredient][category])
             result[fields[category].split("|")[1]] = to_insert
     return result
 
 def split_ingredients_dict_by_category(ingredients_list_csv_to_dict,category):
-    cat = category.capitalize()
     category_list = ingredients_list_csv_to_dict[category]
     choices = []
     cpt = 1
