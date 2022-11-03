@@ -142,5 +142,5 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 
 
-EMAIL_HOST_USER = "nicolas.cesar.pontier@gmail.com"   #your account gmail
-EMAIL_HOST_PASSWORD = "atfjknoojrqhtnoc"         #application code
+EMAIL_HOST_USER = "dj.whattocook@gmail.com"   #your account gmail
+EMAIL_HOST_PASSWORD = "ikumehwbkmpevtbu"         #application code

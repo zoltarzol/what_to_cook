@@ -20264,7 +20264,7 @@ ul.topnav {
         border-radius: 20px;
         /* float: left ; */
         margin-left: 80%;
-        margin-top: 20px;
+        margin-top: 200px;
       }
 
       .mon-bouton:hover {
@@ -20508,7 +20508,7 @@ ul.topnav {
     .header--is-sticked.site-header.sticky-resize.kl-center-menu .main-nav>ul>li>a {
         line-height: 60px !important
     }
-}
+
 
 .site-logo-img-sticky {
     display: none
@@ -25820,7 +25820,7 @@ input {
 
 label,
 input [type=checkbox] {
-    font-size: 1.3vw;
+    font-size: 1vw;
     color: #000 ;
     font-weight: 600;
     line-height: 22px;
@@ -30191,7 +30191,7 @@ ul.scw_list {
 }
 
 .tbk__title2 {
-    margin-top: 0;
+    margin-top: 100px;
     margin-bottom: 10px;
     font-size: 4vw ;
     line-height: 30px;
@@ -30210,7 +30210,7 @@ ul.scw_list {
 
 .legende {
     text-align: left;
-    font-size: 2vw;
+    font-size: 1.5vw;
     color: #000 ;
     border-width: 0 ;
     font-weight: 600 ;
@@ -30826,12 +30826,12 @@ ul.scw_list {
 
 .eluid6c765147 {
     padding-top: 200px;
-    padding-bottom: 230px
+    padding-bottom: 430px
 }
 
 .eluid6c7651472 {
     padding-top: 100px;
-    padding-bottom: 6.7vw
+    padding-bottom: 14.9vw
 }
 
 .eluid374f0b28.th-spacer {
@@ -31217,7 +31217,7 @@ ul.scw_list {
 
 .eluid5a1efe31 {
     padding-top: 0;
-    padding-bottom: 100
+    padding-bottom: 7px
 }
 
 .zn_section.eluid5a1efe31 {
@@ -33949,7 +33949,7 @@ img.kl-iconbox__icon {
 }
 
 .eluidf1651e30 {
-    padding-top: 185px;
+    padding-top: 100px;
     padding-bottom: 60px
 }
 
@@ -34633,7 +34633,6 @@ html[dir=rtl] .vr-tabs-kl-style-1 .vr-tabs-nav-item.active .vr-tabs-nav-link {
     font-weight: 700;
     font-style: normal;
     letter-spacing: 3px;
-    text-transform:
 }
 
 .main-nav>ul>.menu-item>a {
