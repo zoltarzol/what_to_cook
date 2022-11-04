@@ -13482,7 +13482,7 @@ iframe {
 }
 
 a {
-    color: #000
+    /* color: #000 */
 }
 
 a:hover {
@@ -20263,8 +20263,8 @@ ul.topnav {
         transition-duration: 0.2s;
         border-radius: 20px;
         /* float: left ; */
-        margin-left: 80%;
-        margin-top: 200px;
+        margin-left: 0;
+        margin-top: 70px;
       }
 
       .mon-bouton:hover {
@@ -30178,7 +30178,7 @@ ul.scw_list {
 
 .kl-title-block {
     padding-top: 0;
-    padding-bottom: 35px
+    padding-bottom: 0
 }
 
 .tbk__title {
@@ -30406,9 +30406,9 @@ ul.scw_list {
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
-.ma-table {
+/* .ma-table {
     float:center
-}
+} */
 
 .eluid1293c1c02 .tbk__title2 {
     font-family: "Amatic SC", Helvetica, Arial, sans-serif;
@@ -30483,7 +30483,13 @@ ul.scw_list {
 }
 
 .znColumnElement-innerContent {
-    width: 100%
+    width: 100%;
+    /* padding-left: 10%; */
+}
+
+.znColumnElement-innerContent_cedric {
+    width: 80%;
+    padding-left: 10%;
 }
 
 .btn-element>span,
@@ -30830,8 +30836,14 @@ ul.scw_list {
 }
 
 .eluid6c7651472 {
-    padding-top: 100px;
-    padding-bottom: 14.9vw
+    padding-top: 70px;
+    padding-bottom: 188px
+}
+
+.eluid6c7651472_cedric {
+    padding-left: 200px ;
+    padding-top: 160px;
+    padding-bottom: 188px
 }
 
 .eluid374f0b28.th-spacer {
@@ -30861,9 +30873,9 @@ ul.scw_list {
 
 #eluide9bb2794 .btn-element-0 {
     font-family: "Montserrat", Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 22px;
-    font-weight: 700
+    font-weight: 800
 }
 
 .eluidd17db177.th-spacer {
@@ -31216,8 +31228,8 @@ ul.scw_list {
 }
 
 .eluid5a1efe31 {
-    padding-top: 0;
-    padding-bottom: 7px
+    padding-top: 50;
+    padding-bottom: 57px
 }
 
 .zn_section.eluid5a1efe31 {
@@ -32054,9 +32066,10 @@ ul.scw_list {
 
 .eluidb4106c53 .tbk__subtitle {
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
-    color: #fff
+    00;
+    color: #fff;
 }
 
 .eluidb4106c53 .tbk__icon {
@@ -32070,6 +32083,13 @@ ul.scw_list {
 .eluid88b1cfba {
     padding-top: 215px;
     padding-bottom: 215px
+}
+
+.eluid88b1cfba .tbk__title {
+    color: #fff;
+    font-weight: 1000;
+    letter-spacing: 10px;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 /* .ma-boite{
@@ -32413,11 +32433,11 @@ img.kl-iconbox__icon {
 }
 
 .eluid8ebb2d17 .kl-iconbox__inner span.kl-iconbox__icon {
-    font-size: 80px
+    font-size: 0
 }
 
 .eluid8ebb2d17 .kl-iconbox__inner .kl-iconbox__icon {
-    padding: 100px
+    padding: 30px
 }
 
 .eluid790ec6b9 {
@@ -32474,11 +32494,11 @@ img.kl-iconbox__icon {
 }
 
 .eluida17fc61f .kl-iconbox__inner span.kl-iconbox__icon {
-    font-size: 80px
+    font-size: 0
 }
 
 .eluida17fc61f .kl-iconbox__inner .kl-iconbox__icon {
-    padding: 100px
+    padding: 30px
 }
 
 .eluid9181bf84 {
@@ -32535,11 +32555,11 @@ img.kl-iconbox__icon {
 }
 
 .eluide8074687 .kl-iconbox__inner span.kl-iconbox__icon {
-    font-size: 80px
+    font-size: 0
 }
 
 .eluide8074687 .kl-iconbox__inner .kl-iconbox__icon {
-    padding: 100px
+    padding: 30px
 }
 
 .eluid5cc5234f {
@@ -32710,7 +32730,7 @@ img.kl-iconbox__icon {
     color: #cd2122
 }
 
-.eluidfa771b38 .kl-iconbox__inner span.kl-iconbox__icon {
+.eluidfa771b38 eluid8ebb2d17{
     font-size: 16px
 }
 
@@ -33949,8 +33969,8 @@ img.kl-iconbox__icon {
 }
 
 .eluidf1651e30 {
-    padding-top: 100px;
-    padding-bottom: 60px
+    padding-top: 130px;
+    padding-bottom: 0
 }
 
 .zn_section.eluidf1651e30 {
@@ -35307,4 +35327,51 @@ span.arrotate svg {
     100% {
         transform: translatey(0px)
     }
+}
+
+.html_recette { 
+    background: url(../api_home/recipe2.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+ .recipename {
+    font-size: 60px;
+    font-weight: 1000;
+ }
+
+ .ingredients {
+    vertical-align: top;
+ }
+ 
+ .instructions {
+    vertical-align: top;
+ }
+
+.ingredients p {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+ }
+
+.ingredients h1 {
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 8px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+}
+
+  .instructions p {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.instructions h1 {
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 8px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
 }
