@@ -165,33 +165,52 @@
           <span></span>
         </a>
       </div>
-      <div id="main-menu" class="main-nav mainnav--sidepanel mainnav--active-uline mainnav--pointer-dash nav-mm--light zn_mega_wrapper "><ul id="menu-restaurant-menu" class="main-menu main-menu-nav zn_mega_menu ">
-        <li id="menu-item-18" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-18  main-menu-item-top  menu-item-even menu-item-depth-0"><a href="/#eluid5a1efe31" class=" main-menu-link main-menu-link-top"><span>A PROPOS</span></a></li>
-        
-        
-        <li id="menu-item-19" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-19  main-menu-item-top  menu-item-even menu-item-depth-0"><a href="/" class=" main-menu-link main-menu-link-top"><span>HOME</span></a></li>
-        
-        <li id="menu-item-20" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-20  main-menu-item-top  menu-item-even menu-item-depth-0"><a href="/accounts/password_change" class=" main-menu-link main-menu-link-top"><span>CHANGE PASSWORD</span></a></li>
-        
-        
-        <li id="menu-item-19" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-19  main-menu-item-top  menu-item-even menu-item-depth-0"><a href="/#eluidd46f26d5" class=" main-menu-link main-menu-link-top"><span>CONTACT</span></a></li>
-        
-        
-        
-        {% if user.is_authenticated %}
-        <li id="menu-item-21" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-21  main-menu-item-top  menu-item-even menu-item-depth-0"><a href="#eluid0efaa466" class=" main-menu-link main-menu-link-top"> <span class="navbar-text"> LOGGED AS : {{user.get_username}}</span></a></li>
-        
-        
-        
-        <li id="menu-item-18" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-18  main-menu-item-top  menu-item-even menu-item-depth-0"><a href="#eluid5a1efe31" class=" main-menu-link main-menu-link-top"><span> <a class="btn btn-sm btn-outline-secondary" href='/accounts/logout'>LOG OUT</a></span></a></li>   
-        
-        
+      <div id="main-menu"
+        class="main-nav mainnav--sidepanel mainnav--active-uline mainnav--pointer-dash nav-mm--light zn_mega_wrapper ">
+        <ul id="menu-restaurant-menu" class="main-menu main-menu-nav zn_mega_menu ">
+          <li id="menu-item-18"
+            class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-18  main-menu-item-top  menu-item-even menu-item-depth-0">
+            <a href="/#eluid5a1efe31" class=" main-menu-link main-menu-link-top"><span>À PROPOS</span></a></li>
+
+
+          <li id="menu-item-19"
+            class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-19  main-menu-item-top  menu-item-even menu-item-depth-0">
+            <a href="/" class=" main-menu-link main-menu-link-top"><span>HOME</span></a></li>
+
+          <li id="menu-item-20"
+            class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-20  main-menu-item-top  menu-item-even menu-item-depth-0">
+            <a href="/accounts/password_change" class=" main-menu-link main-menu-link-top"><span>CHANGE
+                PASSWORD</span></a></li>
+
+
+          <li id="menu-item-19"
+            class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-19  main-menu-item-top  menu-item-even menu-item-depth-0">
+            <a href="/#eluidd46f26d5" class=" main-menu-link main-menu-link-top"><span>CONTACT</span></a></li>
+
+
+
+          {% if user.is_authenticated %}
+          <li id="menu-item-21"
+            class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-21  main-menu-item-top  menu-item-even menu-item-depth-0">
+            <a href="#eluid0efaa466" class=" main-menu-link main-menu-link-top"> <span> LOGGED AS :
+                {{user.get_username}}</span></a></li>
+
+
+
+          <li id="menu-item-18"
+            class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-18  main-menu-item-top  menu-item-even menu-item-depth-0">
+            <a href="#eluid5a1efe31" class=" main-menu-link main-menu-link-top"><span> <a class="btn btn-sm "
+                  href='/accounts/logout'>LOG OUT</a></span></a></li>
+
+
           {% else %}
           <span class='navbar-text'>You are not logged</span>
-        {% endif %}
-        
-        
-        </ul></div> </div>
+          {% endif %}
+
+
+        </ul>
+      </div>
+    </div>
 
   </div>
   <div
@@ -209,97 +228,104 @@
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </header>
 
-<body>
+<body class="html_recette">
 
   <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5TKGS7" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <div class="zn_pb_wrapper clearfix zn_sortable_content" data-droplevel="0">
-    <section class="zn_section eluid6c7651472 section-sidemargins zn_section--relative section--no "
+    <section class="zn_section eluid6c7651472_cedric  section-sidemargins zn_section--relative section--no "
       id="eluid6c7651472">
-      <div class="zn-bgSource">
+      <!-- <div class="zn-bgSource">
         <div class="zn-bgSource-image"
-          style="background-image:url({%static 'api_home/recipe2.jpg' %});background-repeat:no-repeat;background-position:center;background-size:cover;background-attachment:scroll">
+          style="background-image:url({%static 'api_home/recipe2.jpg' %});background-repeat:no-repeat;background-position:center;background-size:100%;background-attachment:scroll">
         </div>
-      </div>
-      <div class="zn_section_size container zn-section-height--auto zn-section-content_algn--top ">
-        <div class="row ">
-          <div class="eluid4ebdbad4    col-md-12 col-sm-12   znColumnElement" id="eluid4ebdbad4">
-            <div
-              class="znColumnElement-innerWrapper-eluid4ebdbad4 znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-top znColumnElement-innerWrapper--halign-left ">
-              <div class="znColumnElement-innerContent">
-                <div
-                  class="kl-title-block clearfix tbk--text- tbk--center text-center tbk-symbol--  tbk-icon-pos--after-title eluid1293c1c02 ">
+      </div> -->
+      <div
+        class="znColumnElement-innerWrapper-eluid4ebdbad4 znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-top znColumnElement-innerWrapper--halign-left ">
+        <div class="znColumnElement-innerContent_cedric">
+          <div
+            class="kl-title-block clearfix tbk--text- tbk--center text-center tbk-symbol--  tbk-icon-pos--after-title eluid1293c1c02 ">
 
-                  <div class="home">
-                    <div id="conteneur">
-                      <div class="nom_recette">
-                        <h1>Recette : {{ resultat.RecipeName }}</h1>
-                      </div>
-                      <div>
-                        <div>
-                        <table class="ma-table" style="width:100%">
-                          <tr>
-                            <td>
-                              <div class="ingredients">
-                                    <h1>Ingredients</h1>
-                                    {% for i in resultat.Ingredients %}
-                                    <p>{{i}}</p>
-                                    {% endfor %}
-                              </div>
-                            </td>
-                            <td>
-                              <div class="instructions">
-                                <h1>Étapes</h1>
-                                {% for i in resultat.Steps %}
-                                <p>{{i}}</p>
-                                {% endfor %}
-                              </div>
-                              </td>
-                        </table>
-                      </div>
-                    </div>
+            <div class="home">
+              <div id="conteneur">
+                <div class="nom_recette"><br>
+                  <h1 class="recipename">{{ resultat.RecipeName }}</h1><br><br>
+                </div>
+                <div>
+                  <div>
+                    <table class="ma-table" style="width:100%">
+                      <tr>
+                        <td width="37%" style="vertical-align:center;">
+                          <div class="ingredients">
+                            <h1>Ingrédients</h1><br>
+                            {% for i in resultat.Ingredients %}
+                            <p>{{i}}</p>
+                            {% endfor %}
+                          </div>
+                        </td>
+                        <td width="6%"></td>
+                        <td width="57%" style="vertical-align:center;">
+                          <div class="instructions">
+                            <h1>Étapes</h1><br>
+                            {% for i in resultat.Steps %}
+                            <p>{{i}}</p>
+                            {% endfor %}
+                          </div>
+                        </td>
+                        </tr>
+                    </table><br><br>
+                    <a href="/api"><input class="mon-bouton" type="submit" value="Nouvelle recette"></a>
                   </div>
-                <script type='text/javascript' id='hg-mailchimp-js-js-extra'>
-                  /* <![CDATA[ */
-                  var hgMailchimpConfig = { "ajaxurl": "\/phaeton-restaurant-bar-pub\/wp-admin\/admin-ajax.php", "l10n": { "error": "Error:" } }
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </div>
+  <script type='text/javascript' id='hg-mailchimp-js-js-extra'>
+    /* <![CDATA[ */
+    var hgMailchimpConfig = { "ajaxurl": "\/phaeton-restaurant-bar-pub\/wp-admin\/admin-ajax.php", "l10n": { "error": "Error:" } }
   /* ]]> */
-                </script>
-                <script type='text/javascript'
-                  src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/themes/kallyas/framework/hogash-mailchimp/assets/js/hg-mailchimp.js?ver=1.0.0'
-                  id='hg-mailchimp-js-js'></script>
-                <script type='text/javascript'
-                  src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/themes/kallyas/js/plugins.min.js?ver=4.18.1'
-                  id='kallyas_vendors-js'></script>
-                <script type='text/javascript'
-                  src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/themes/kallyas/addons/scrollmagic/scrollmagic.js?ver=4.18.1'
-                  id='scrollmagic-js'></script>
+  </script>
+  <script type='text/javascript'
+    src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/themes/kallyas/framework/hogash-mailchimp/assets/js/hg-mailchimp.js?ver=1.0.0'
+    id='hg-mailchimp-js-js'></script>
+  <script type='text/javascript'
+    src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/themes/kallyas/js/plugins.min.js?ver=4.18.1'
+    id='kallyas_vendors-js'></script>
+  <script type='text/javascript'
+    src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/themes/kallyas/addons/scrollmagic/scrollmagic.js?ver=4.18.1'
+    id='scrollmagic-js'></script>
 
-                <script type='text/javascript'
-                  src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/themes/kallyas/js/znscript.min.js?ver=4.18.1'
-                  id='zn-script-js'></script>
-                <script type='text/javascript'
-                  src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/themes/kallyas/addons/smooth_scroll/SmoothScroll.min.js?ver=4.18.1'
-                  id='smooth_scroll-js'></script>
-                <script type='text/javascript'
-                  src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/themes/kallyas/addons/slick/slick.min.js?ver=4.18.1'
-                  id='slick-js'></script>
+  <script type='text/javascript'
+    src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/themes/kallyas/js/znscript.min.js?ver=4.18.1'
+    id='zn-script-js'></script>
+  <script type='text/javascript'
+    src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/themes/kallyas/addons/smooth_scroll/SmoothScroll.min.js?ver=4.18.1'
+    id='smooth_scroll-js'></script>
+  <script type='text/javascript'
+    src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/themes/kallyas/addons/slick/slick.min.js?ver=4.18.1'
+    id='slick-js'></script>
 
-                <script type='text/javascript'
-                  src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/themes/kallyas/framework/zion-builder/dist/znpb_frontend.bundle.js?ver=1.0.29'
-                  id='zion-frontend-js-js'></script>
-                <script type='text/javascript'
-                  src='https://maps.googleapis.com/maps/api/js?v=3&#038;key=AIzaSyBncbxnBt1wziY7Mghk4hDUzjPGGk_xx_A&#038;ver=4.18.1'
-                  id='zn_google_api-js'></script>
-                <script type='text/javascript'
-                  src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/themes/kallyas/pagebuilder/elements/google_map/assets/markerclusterer.js?ver=4.18.1'
-                  id='zn_gmap_clustering-js'></script>
-                <script type='text/javascript' id='zn_gmap-js-extra'>
-                  /* <![CDATA[ */
+  <script type='text/javascript'
+    src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/themes/kallyas/framework/zion-builder/dist/znpb_frontend.bundle.js?ver=1.0.29'
+    id='zion-frontend-js-js'></script>
+  <script type='text/javascript'
+    src='https://maps.googleapis.com/maps/api/js?v=3&#038;key=AIzaSyBncbxnBt1wziY7Mghk4hDUzjPGGk_xx_A&#038;ver=4.18.1'
+    id='zn_google_api-js'></script>
+  <script type='text/javascript'
+    src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/themes/kallyas/pagebuilder/elements/google_map/assets/markerclusterer.js?ver=4.18.1'
+    id='zn_gmap_clustering-js'></script>
+  <script type='text/javascript' id='zn_gmap-js-extra'>
+    /* <![CDATA[ */
 
-                </script>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-                  integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-                  crossorigin="anonymous"></script>
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
 
 </body>
 

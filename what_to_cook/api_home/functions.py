@@ -46,12 +46,11 @@ def find_recipe(ingredients):
 
     complete_recipe = response["choices"][0]["text"][:]
 
-    while complete_recipe.find("\n") == 0:
+    while complete_recipe.find(" ") == 0 or complete_recipe.find("\n") == 0:
+        complete_recipe = complete_recipe.strip(' ')
         complete_recipe = complete_recipe.strip('\n')
 
-    while complete_recipe.find(" ") == 0:
-        complete_recipe = complete_recipe.strip(' ')
-
+    complete_recipe = complete_recipe.replace('to cook the dish\n','')
     complete_recipe = complete_recipe.replace('to prepare the dish\n','')
     complete_recipe = complete_recipe.replace('Recipe for','')
     complete_recipe = complete_recipe.replace('Instructions:','Steps')
@@ -59,6 +58,11 @@ def find_recipe(ingredients):
     complete_recipe = complete_recipe.replace('Steps:','Steps')
     complete_recipe = complete_recipe.replace('Steps','Steps:')
     complete_recipe = complete_recipe.replace('to follow','')
+    complete_recipe = complete_recipe.replace('Name of the recipe:','')
+
+    while complete_recipe.find(" ") == 0 or complete_recipe.find("\n") == 0:
+        complete_recipe = complete_recipe.strip(' ')
+        complete_recipe = complete_recipe.strip('\n')
 
     recipe_name = complete_recipe[: complete_recipe.find("\nIngredients:")]
 
@@ -70,7 +74,7 @@ def find_recipe(ingredients):
     ingredients_list = list(filter(lambda a: a != '', ingredients_list))
 
     steps_list = list(steps_extraction.split('\n'))
-    steps_list = list(i[:] for i in steps_list)
+    steps_list = list(i[3:] for i in steps_list)
     steps_list = list(filter(lambda a: a != '', steps_list))
 
     print("=========================================\n"+str(response)+"\n=========================================\n")
