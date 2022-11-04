@@ -298,27 +298,30 @@
     {% endif %}
 {% endif %}
 
+<div class="text-center container">    
+
 <form method="post" action="{% url 'login' %}"> 
     {% csrf_token %}      
-    <div class="text-center container">    
+    
              
         
       <img class="mb-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMFma6OhEXZNWIyXpLEsNLAWnySXijjanBqg&usqp=CAU" alt="" width="72" height="57">
       <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
   
-      <div class="form-floating">
-        
+      <div class="mb-3">
+        <label for="{{form.username.id_for_label}}" class="form-label" >User Name</label>
+
         {{form.username|add_class:"form-control"}}
 
 
-        <label for="{{form.username.id_for_label}}" class="form-label" >User Name</label>
-
+       
 
       </div>
-      <div class="form-floating">
+      <div class="mb-3">
+        <label for="{{form.password.id_for_label}}" class="form-label">Password</label>
         {{form.password|add_class:"form-control"}}
         
-        <label for="{{form.password.id_for_label}}" class="form-label">Password</label>
+        
       </div>
   
       <div class="checkbox mb-3">
@@ -332,8 +335,9 @@
       <p><a href="{% url 'password_reset' %}">Forgot your password?</a></p>
 
       <p class="mt-5 mb-3 text-muted">&copy; 2022–2023</p>
+    
     </form>
-    </div>
+  </div>
   
 {% endblock content %}
 
