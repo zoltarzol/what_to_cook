@@ -29,7 +29,7 @@ size: 80px;
 
 .tdStyle
 {
-background-image:url('../images/recipe.jpg');
+background-image:url('/static/images/recipe.jpg');
 background-repeat:no-repeat;
 background-size:100%;
 }
