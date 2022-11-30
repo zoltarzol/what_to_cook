@@ -1,0 +1,343 @@
+{% load widget_tweaks %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="twitter:widgets:csp" content="on" />
+  <link rel="profile" href="https://gmpg.org/xfn/11" />
+  <link rel="pingback" href="https://demo.kallyas.net/phaeton-restaurant-bar-pub/xmlrpc.php" />
+  <link media="all" href="{% static 'css/autoptimize_de4a4eb0fc3d317e8cfe93d94567d4f4.css' %}" rel="stylesheet" />
+  <link media="print" href="{% static 'css/autoptimize_eca5ff01e2572fca01bcd186d357dff1.css' %}" rel="stylesheet" />
+  <title>What to cook ?</title>
+
+
+  <meta name='robots' content='max-image-preview:large' />
+  <link rel='dns-prefetch' href='//s.w.org' />
+  <link rel="alternate" type="application/rss+xml" title="Phaeton - Pub / Bar / Restaurant Demo &raquo; Feed"
+    href="https://demo.kallyas.net/phaeton-restaurant-bar-pub/feed/" />
+  <script type="text/javascript">
+    window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/demo.kallyas.net\/phaeton-restaurant-bar-pub\/wp-includes\/js\/wp-emoji-release.min.js?ver=d9b8ba3231c73f218f6afb504a962815" } };
+    /*! This file is auto-generated */
+    !function (e, a, t) { var n, r, o, i = a.createElement("canvas"), p = i.getContext && i.getContext("2d"); function s(e, t) { var a = String.fromCharCode, e = (p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, e), 0, 0), i.toDataURL()); return p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, t), 0, 0), e === i.toDataURL() } function c(e) { var t = a.createElement("script"); t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t) } for (o = Array("flag", "emoji"), t.supports = { everything: !0, everythingExceptFlag: !0 }, r = 0; r < o.length; r++)t.supports[o[r]] = function (e) { if (!p || !p.fillText) return !1; switch (p.textBaseline = "top", p.font = "600 32px Arial", e) { case "flag": return s([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) ? !1 : !s([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) && !s([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]); case "emoji": return !s([129777, 127995, 8205, 129778, 127999], [129777, 127995, 8203, 129778, 127999]) }return !1 }(o[r]), t.supports.everything = t.supports.everything && t.supports[o[r]], "flag" !== o[r] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[o[r]]); t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function () { t.DOMReady = !0 }, t.supports.everything || (n = function () { t.readyCallback() }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function () { "complete" === a.readyState && t.readyCallback() })), (e = t.source || {}).concatemoji ? c(e.concatemoji) : e.wpemoji && e.twemoji && (c(e.twemoji), c(e.wpemoji))) }(window, document, window._wpemojiSettings);
+  </script>
+  <link rel='stylesheet' id='zn_all_g_fonts-css'
+    href='//fonts.googleapis.com/css?family=Amatic+SC%3Aregular%2C700%7CMontserrat%3Aregular%2C700%7COpen+Sans%3A300%2Cregular%2C700&#038;ver=d9b8ba3231c73f218f6afb504a962815'
+    type='text/css' media='all' />
+  <script type='text/javascript'
+    src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-includes/js/jquery/jquery.min.js?ver=3.6.0'
+    id='jquery-core-js'></script>
+  <script type='text/javascript'
+    src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/plugins/revslider/public/assets/js/revolution.tools.min.js?ver=6.0'
+    id='tp-tools-js'></script>
+  <script type='text/javascript'
+    src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.1.6'
+    id='revmin-js'></script>
+
+
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5TKGS7');</script>
+
+
+  <meta name="theme-color" content="#333">
+  <meta name="theme-color" content="#ffcc00">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+
+
+  <noscript>
+    <style type="text/css" media="screen">
+      .zn-animateInViewport {
+        visibility: visible;
+      }
+    </style>
+  </noscript>
+
+  <!-- Icone application -->
+
+  <!-- https://icon-library.com/images/food-app-icon/food-app-icon-12.jpg  -->
+
+  <meta name="generator"
+    content="Powered by Slider Revolution 6.1.6 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+  <link rel="icon"
+    href="https://e7.pngegg.com/pngimages/635/1012/png-clipart-fusion-cuisine-burrito-restaurant-food-lunch-icon-angle-kitchen-thumbnail.png"
+    sizes="32x32" />
+  <link rel="icon"
+    href="https://e7.pngegg.com/pngimages/635/1012/png-clipart-fusion-cuisine-burrito-restaurant-food-lunch-icon-angle-kitchen-thumbnail.png"
+    sizes="192x192" />
+  <link rel="apple-touch-icon"
+    href="https://e7.pngegg.com/pngimages/635/1012/png-clipart-fusion-cuisine-burrito-restaurant-food-lunch-icon-angle-kitchen-thumbnail.png" />
+  <meta name="msapplication-TileImage"
+    content="https://e7.pngegg.com/pngimages/635/1012/png-clipart-fusion-cuisine-burrito-restaurant-food-lunch-icon-angle-kitchen-thumbnail.png" />
+
+  <style>
+    .box {
+      display: flex;
+    }
+
+    .box>* {
+      flex: 1 1 200px;
+    }
+
+    .hide {
+      visibility: collapse;
+    }
+  </style>
+
+  <script type="text/javascript">function setREVStartSize(e) {
+      try {
+        var pw = document.getElementById(e.c).parentNode.offsetWidth,
+          newh;
+        pw = pw === 0 || isNaN(pw) ? window.innerWidth : pw;
+        e.tabw = e.tabw === undefined ? 0 : parseInt(e.tabw);
+        e.thumbw = e.thumbw === undefined ? 0 : parseInt(e.thumbw);
+        e.tabh = e.tabh === undefined ? 0 : parseInt(e.tabh);
+        e.thumbh = e.thumbh === undefined ? 0 : parseInt(e.thumbh);
+        e.tabhide = e.tabhide === undefined ? 0 : parseInt(e.tabhide);
+        e.thumbhide = e.thumbhide === undefined ? 0 : parseInt(e.thumbhide);
+        e.mh = e.mh === undefined || e.mh == "" || e.mh === "auto" ? 0 : parseInt(e.mh, 0);
+        if (e.layout === "fullscreen" || e.l === "fullscreen")
+          newh = Math.max(e.mh, window.innerHeight);
+        else {
+          e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+          for (var i in e.rl) if (e.gw[i] === undefined || e.gw[i] === 0) e.gw[i] = e.gw[i - 1];
+          e.gh = e.el === undefined || e.el === "" || (Array.isArray(e.el) && e.el.length == 0) ? e.gh : e.el;
+          e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+          for (var i in e.rl) if (e.gh[i] === undefined || e.gh[i] === 0) e.gh[i] = e.gh[i - 1];
+
+          var nl = new Array(e.rl.length),
+            ix = 0,
+            sl;
+          e.tabw = e.tabhide >= pw ? 0 : e.tabw;
+          e.thumbw = e.thumbhide >= pw ? 0 : e.thumbw;
+          e.tabh = e.tabhide >= pw ? 0 : e.tabh;
+          e.thumbh = e.thumbhide >= pw ? 0 : e.thumbh;
+          for (var i in e.rl) nl[i] = e.rl[i] < window.innerWidth ? 0 : e.rl[i];
+          sl = nl[0];
+          for (var i in nl) if (sl > nl[i] && nl[i] > 0) { sl = nl[i]; ix = i; }
+          var m = pw > (e.gw[ix] + e.tabw + e.thumbw) ? 1 : (pw - (e.tabw + e.thumbw)) / (e.gw[ix]);
+
+          newh = (e.type === "carousel" && e.justify === "true" ? e.gh[ix] : (e.gh[ix] * m)) + (e.tabh + e.thumbh);
+        }
+
+        if (window.rs_init_css === undefined) window.rs_init_css = document.head.appendChild(document.createElement("style"));
+        document.getElementById(e.c).height = newh;
+        window.rs_init_css.innerHTML += "#" + e.c + "_wrapper { height: " + newh + "px }";
+      } catch (e) {
+        console.log("Failure at Presize of Slider:" + e)
+      }
+    };</script>
+</head>
+
+
+
+
+
+<!-- header -->
+
+<header id="header"
+  class="site-header  style13 header--sticky header--is-sticked  sticky-resize  nav-th--light kl-center-menu header-sh--default"
+  data-original-sticky-textscheme="sh--default" role="banner" itemscope="itemscope"
+  itemtype="https://schema.org/WPHeader">
+
+  <div class='fxb-col fxb fxb-center-x fxb-center-y fxb-basis-auto site-header-col-center site-header-main-center'>
+    <div id="logo-container" class="logo-container  hasHoverMe logosize--contain zn-original-logo">
+
+      <!-- logo -->
+
+      <h1 class='site-logo logo ' id='logo'><img class="logo-img site-logo-img" src="{% static 'api_home/logo.png' %}"
+          alt="What to Cook ?" title="What to Cook ?" /></a></h1>
+    </div>
+    <div class="sh-component main-menu-wrapper" role="navigation" itemscope="itemscope"
+      itemtype="https://schema.org/SiteNavigationElement">
+      <div class="zn-res-menuwrapper">
+        <a href="#" class="zn-res-trigger zn-menuBurger zn-menuBurger--3--s zn-menuBurger--anim1 " id="zn-res-trigger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+      <div id="main-menu" class="main-nav mainnav--sidepanel mainnav--active-uline mainnav--pointer-dash nav-mm--light zn_mega_wrapper "><ul id="menu-restaurant-menu" class="main-menu main-menu-nav zn_mega_menu ">
+        <li id="menu-item-18" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-18  main-menu-item-top  menu-item-even menu-item-depth-0"><a href="/#eluid5a1efe31" class=" main-menu-link main-menu-link-top"><span>A PROPOS</span></a></li>
+        
+        
+        <li id="menu-item-19" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-19  main-menu-item-top  menu-item-even menu-item-depth-0"><a href="/" class=" main-menu-link main-menu-link-top"><span>HOME</span></a></li>
+        
+    
+        
+        <li id="menu-item-19" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-19  main-menu-item-top  menu-item-even menu-item-depth-0"><a href="/#eluidd46f26d5" class=" main-menu-link main-menu-link-top"><span>CONTACT</span></a></li>
+        
+        
+        
+        {% if user.is_authenticated %}
+        <li id="menu-item-21" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-21  main-menu-item-top  menu-item-even menu-item-depth-0"><a href="#eluid0efaa466" class=" main-menu-link main-menu-link-top"> <span class="navbar-text"> LOGGED AS : {{user.get_username}}</span></a></li>
+        
+        
+        
+        <li id="menu-item-18" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-18  main-menu-item-top  menu-item-even menu-item-depth-0"><a href="#eluid5a1efe31" class=" main-menu-link main-menu-link-top"><span> <a class="btn btn-sm btn-outline-secondary" href='/accounts/logout'>LOG OUT</a></span></a></li>   
+        
+        
+          {% else %}
+          <li id="menu-item-18" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-18  main-menu-item-top  menu-item-even menu-item-depth-0"><a href="#eluid5a1efe31" class=" main-menu-link main-menu-link-top"><span class='navbar-text'>YOU ARE NOT LOGGED</span></a></li>   
+        
+        
+          
+        {% endif %}
+        
+        
+        </ul></div> </div>
+
+  </div>
+  <div
+    class='fxb-col fxb fxb-end-x fxb-center-y fxb-basis-auto fxb-grow-0  site-header-col-right site-header-main-right'>
+    <div class='fxb-col fxb fxb-end-x fxb-center-y fxb-basis-auto fxb-grow-0  site-header-main-right-top'>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</header>
+
+<body>
+
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5TKGS7" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <div class="zn_pb_wrapper clearfix zn_sortable_content" data-droplevel="0">
+    <section class="zn_section eluid6c7651472 section-sidemargins zn_section--relative section--no "
+      id="eluid6c7651472">
+      <div class="zn-bgSource">
+        <div class="zn-bgSource-image"
+          style="background-image:url({%static 'api_home/login.jpg' %});background-repeat:no-repeat;background-position:center;background-size:cover;background-attachment:scroll">
+        </div>
+      </div>
+      <div class="zn_section_size container zn-section-height--auto zn-section-content_algn--top ">
+        <div class="row ">
+          <div class="eluid4ebdbad4    col-md-12 col-sm-12   znColumnElement" id="eluid4ebdbad4">
+            <div
+              class="znColumnElement-innerWrapper-eluid4ebdbad4 znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-top znColumnElement-innerWrapper--halign-left ">
+              <div class="znColumnElement-innerContent">
+                <div
+                  class="kl-title-block clearfix tbk--text- tbk--center text-center tbk-symbol--  tbk-icon-pos--after-title eluid1293c1c02 ">
+
+                  
+                <script type='text/javascript'
+                  src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/themes/kallyas/framework/hogash-mailchimp/assets/js/hg-mailchimp.js?ver=1.0.0'
+                  id='hg-mailchimp-js-js'></script>
+                <script type='text/javascript'
+                  src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/themes/kallyas/js/plugins.min.js?ver=4.18.1'
+                  id='kallyas_vendors-js'></script>
+                <script type='text/javascript'
+                  src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/themes/kallyas/addons/scrollmagic/scrollmagic.js?ver=4.18.1'
+                  id='scrollmagic-js'></script>
+
+                <script type='text/javascript'
+                  src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/themes/kallyas/js/znscript.min.js?ver=4.18.1'
+                  id='zn-script-js'></script>
+                <script type='text/javascript'
+                  src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/themes/kallyas/addons/smooth_scroll/SmoothScroll.min.js?ver=4.18.1'
+                  id='smooth_scroll-js'></script>
+                <script type='text/javascript'
+                  src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/themes/kallyas/addons/slick/slick.min.js?ver=4.18.1'
+                  id='slick-js'></script>
+
+                <script type='text/javascript'
+                  src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/themes/kallyas/framework/zion-builder/dist/znpb_frontend.bundle.js?ver=1.0.29'
+                  id='zion-frontend-js-js'></script>
+                <script type='text/javascript'
+                  src='https://maps.googleapis.com/maps/api/js?v=3&#038;key=AIzaSyBncbxnBt1wziY7Mghk4hDUzjPGGk_xx_A&#038;ver=4.18.1'
+                  id='zn_google_api-js'></script>
+                <script type='text/javascript'
+                  src='https://demo.kallyas.net/phaeton-restaurant-bar-pub/wp-content/themes/kallyas/pagebuilder/elements/google_map/assets/markerclusterer.js?ver=4.18.1'
+                  id='zn_gmap_clustering-js'></script>
+                <script type='text/javascript' id='zn_gmap-js-extra'>
+                  /* <![CDATA[ */
+
+                </script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+                  integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+                  crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+{% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+
+{% if next %}
+    {% if user.is_authenticated %}
+    <p>Your account doesn't have access to this page. To proceed,
+    please login with an account that has access.</p>
+    {% else %}
+    <p>Please login to see this page.</p>
+
+    <!-- <a href="{% url 'login' %}">Log In</a> -->
+    
+    {% endif %}
+{% endif %}
+
+<form method="post" action="{% url 'login' %}"> 
+    {% csrf_token %}      
+    <div class="text-center container">    
+             
+        
+      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+  
+      <div class="mb-3">
+        
+        <label for="{{form.username.id_for_label}}" class="form-label" >User Name</label>
+        {{form.username|add_class:"form-control"}}
+
+
+      </div>
+      <div class="mb-3">
+        <label for="{{form.password.id_for_label}}" class="form-label">Password</label>
+        {{form.password|add_class:"form-control"}}
+      </div>
+  
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me">Remember me
+        </label>
+
+       
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+      <p><a href="{% url 'password_reset' %}">Forgot your password?</a></p>
+
+      <p class="mt-5 mb-3 text-muted">&copy; 2022–2023</p>
+    </form>
+    </div>
+  
+{% endblock content %}
+
+
+
+
+
+
+
+
+
