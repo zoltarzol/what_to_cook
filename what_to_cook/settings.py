@@ -176,4 +176,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = '/'
 
-CSRF_TRUSTED_ORIGINS = ['https://zoltar-w2c.herokuapp.com/']
+CSRF_TRUSTED_ORIGINS = ['https://zoltar-w2c.herokuapp.com']
