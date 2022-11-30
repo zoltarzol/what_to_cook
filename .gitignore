@@ -1,12 +1,3 @@
-# répertoire personnel de Cédric
-/WFH
-
-# autres répertoires ou fichiers à ignorer
-db.sqlite3
-.env
-.test.json
-.test.ipynb
-
 # Created by https://www.toptal.com/developers/gitignore/api/linux,django
 # Edit at https://www.toptal.com/developers/gitignore?templates=linux,django
 
@@ -198,3 +189,11 @@ cython_debug/
 # End of https://www.toptal.com/developers/gitignore/api/linux,django
 
 
+# répertoire personnel de Cédric
+/WFH
+
+# autres répertoires ou fichiers à ignorer
+db.sqlite3
+.env
+.test.json
+.test.ipynb
