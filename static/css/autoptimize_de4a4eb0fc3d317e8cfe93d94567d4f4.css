@@ -35328,7 +35328,7 @@ span.arrotate svg {
 }
 
 .html_recette { 
-    background: url(../api_home/recipe2.jpg) no-repeat center center fixed; 
+    background: url(/static/images/recipe2.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
