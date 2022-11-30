@@ -193,5 +193,7 @@ cython_debug/
 /WFH
 
 # autres répertoires ou fichiers à ignorer
+db.sqlite3
+.env
 .test.json
 .test.ipynb
