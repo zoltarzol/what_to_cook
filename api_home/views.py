@@ -10,7 +10,6 @@ from . import forms
 def page_home(request):
     return render(request,'pages_main/home.html')
 
-@login_required
 def create_recipe(request):
     print("REQUEST: ",request)
     form = IngredientsForm(request.POST)
