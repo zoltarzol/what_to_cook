@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .forms import IngredientsForm, TestForm
 from .functions import ingredients_full_list, find_recipe
 from django.views.generic import CreateView
-from django.contrib.auth.forms import UserCreationForm
+# from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
 from . import forms
