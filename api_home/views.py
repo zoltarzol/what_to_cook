@@ -31,7 +31,6 @@ def create_recipe(request):
     else:
         return render(request, 'pages_main/ingredient_choices.html', {'form': form, 'ingredients_full_list': ingredients_full_list })
 
-@login_required
 def recipe_rslt (request):
     form = TestForm(request.POST)
     return render(request, 'pages_main/final_recipe.html', context = form.resultat)
